@@ -16,7 +16,9 @@ class MainTableViewController: UITableViewController {
 //
 //    let restaurantImages = ["ogonek.jpg", "elu.jpg", "bonsai.jpg", "dastarhan.jpg", "indokitay.jpg", "x.o.jpg", "balkan.jpg", "respublika.jpg", "speakeasy.jpg", "morris.jpg", "istorii.jpg", "klassik.jpg", "love.jpg", "shok.jpg", "bochka.jpg"]
     
-    let lps = ListPagerLab.shared.listPagers
+    var currentPhase = "MAIN3X3"
+    //var currentPhase = "BEGIN3X3"
+    var lps = ListPagerLab.shared.getPhaseList(phase: "MAIN3X3")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +28,7 @@ class MainTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         //self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
+        lps = ListPagerLab.shared.getPhaseList(phase: currentPhase)
         
     }
 

@@ -15,11 +15,11 @@ struct MainMenu : Phases  {
     }
     
     func titles() -> [String] {
-        return name
+        return title
     }
     
     func images() -> [String] {
-        return icon
+        return image
     }
     
     func descs() -> [String] {
@@ -34,7 +34,7 @@ struct MainMenu : Phases  {
         return []
     }
     
-    let name = [
+    let title = [
         "С чего начать?",
         "Метод для начинающих от Антона Розова (10+)",
         "Метод для начинающих от Максима Чечнева (7+)",
@@ -43,7 +43,7 @@ struct MainMenu : Phases  {
         "Узоры на кубике"
     ]
     
-    let icon = [
+    let image = [
         "main_1",
         "main_2",
         "main_3",

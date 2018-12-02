@@ -13,10 +13,12 @@ class ListPagerViewController: UIViewController {
     @IBOutlet weak var titleImage: UIImageView!
     @IBOutlet weak var titleText: UILabel!
     @IBOutlet weak var descriptionText: UILabel!
+    var phase = ""
+    var id = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        titleImage.image = UIImage(named: "ic_begin.pdf")
     }
     
 

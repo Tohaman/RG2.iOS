@@ -18,12 +18,12 @@ protocol Phases {
 }
 
 
-
 class ListPagerLab {
     var listPagers : [ListPager] = []
     
     private init() {
         phaseInit(phasesStrings: MainMenu())
+        phaseInit(phasesStrings: Begin3x3())
     }
     static let shared = ListPagerLab()
     
@@ -43,5 +43,15 @@ class ListPagerLab {
                 listPagers.append(ListPager(phase: phase, id: i, title: titles[i], image: images[i], description: descrs[i], url: urls[i], comment: comments[i]))
             }
         }
+    }
+
+    func getPhaseList (phase: String) -> [ListPager] {
+        var lps : [ListPager] = []
+        for item in listPagers {
+            if item.phase == phase {
+                lps.append(item)
+            }
+        }
+        return lps
     }
 }

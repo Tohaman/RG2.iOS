@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main Table View Controller-->
+        <!--Кубик 3х3-->
         <scene sceneID="1ie-VH-eQ7">
             <objects>
                 <tableViewController id="V8S-dq-TjQ" customClass="MainTableViewController" customModule="RG2" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,7 +52,7 @@
                                 <connections>
                                     <outlet property="titleImageView" destination="Abm-KA-6uz" id="rKq-qL-aPg"/>
                                     <outlet property="titleTextView" destination="k4a-6X-aFK" id="Muy-bX-hyt"/>
-                                    <segue destination="mE3-gM-EML" kind="show" id="Lxg-Yh-txU"/>
+                                    <segue destination="mE3-gM-EML" kind="show" identifier="listPagerSegue" id="Lxg-Yh-txU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -61,7 +61,7 @@
                             <outlet property="delegate" destination="V8S-dq-TjQ" id="hIF-Wa-XOT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="oy3-4U-aep"/>
+                    <navigationItem key="navigationItem" title="Кубик 3х3" id="oy3-4U-aep"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c7M-tk-EmQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,19 +85,19 @@
                                     <constraint firstAttribute="width" constant="70" id="KW6-j1-zdN"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TitleText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8q5-ZP-M1u">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TitleText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8q5-ZP-M1u">
                                 <rect key="frame" x="90" y="74" width="269" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="6lp-LS-mr5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DescriptionText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ftx-9B-CKr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DescriptionText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ftx-9B-CKr">
                                 <rect key="frame" x="16" y="152" width="343" height="495"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -120,7 +120,7 @@
                         <viewLayoutGuide key="safeArea" id="gKL-6n-bAz"/>
                     </view>
                     <connections>
-                        <outlet property="DescriptionText" destination="Ftx-9B-CKr" id="TjZ-aU-8XF"/>
+                        <outlet property="descriptionText" destination="Ftx-9B-CKr" id="4kC-kx-RYo"/>
                         <outlet property="titleImage" destination="can-oF-fLe" id="VZX-9h-pRm"/>
                         <outlet property="titleText" destination="8q5-ZP-M1u" id="JIT-5n-pvO"/>
                     </connections>
