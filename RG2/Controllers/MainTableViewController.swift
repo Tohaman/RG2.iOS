@@ -16,18 +16,13 @@ class MainTableViewController: UITableViewController {
 //
 //    let restaurantImages = ["ogonek.jpg", "elu.jpg", "bonsai.jpg", "dastarhan.jpg", "indokitay.jpg", "x.o.jpg", "balkan.jpg", "respublika.jpg", "speakeasy.jpg", "morris.jpg", "istorii.jpg", "klassik.jpg", "love.jpg", "shok.jpg", "bochka.jpg"]
     
-    var currentPhase = "MAIN3X3"
-    //var currentPhase = "BEGIN3X3"
+    //var currentPhase = "MAIN3X3"
+    var currentPhase = "BEGIN3X3"
     var lps = ListPagerLab.shared.getPhaseList(phase: "MAIN3X3")
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        //self.navigationItem.rightBarButtonItem = self.editButtonItem
         lps = ListPagerLab.shared.getPhaseList(phase: currentPhase)
         
     }
@@ -75,6 +70,16 @@ class MainTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //showAlert(index: indexPath.row)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "listPagerSegue" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let dvc = segue.destination as! ListPagerViewController
+                dvc.phase = lps[indexPath.row].phase
+                dvc.id = lps[indexPath.row].id
+            }
+        }
     }
     
 }

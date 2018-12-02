@@ -18,7 +18,8 @@ class ListPagerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleImage.image = UIImage(named: "ic_begin.pdf")
+        let lp = ListPagerLab.shared.getPhaseItem(phase: phase, id: id)
+        titleImage.image = UIImage(named: lp.image)
     }
     
 

@@ -54,4 +54,14 @@ class ListPagerLab {
         }
         return lps
     }
+    
+    func getPhaseItem (phase: String, id: Int) -> ListPager {
+        var lp = ListPager (phase: phase, id: id, title: "", image: "", description: "", url: "", comment: "")
+        for item in listPagers {
+            if (item.phase == phase) && (item.id == id) {
+                lp = item
+            }
+        }
+        return lp
+    }
 }
