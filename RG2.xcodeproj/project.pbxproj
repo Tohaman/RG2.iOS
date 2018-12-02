@@ -17,6 +17,7 @@
 		3A255BFE21B1BDA5002FA07B /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A255BFD21B1BDA5002FA07B /* MainMenu.swift */; };
 		3A255C0121B1BDDC002FA07B /* ListPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A255C0021B1BDDC002FA07B /* ListPager.swift */; };
 		3A255C0321B1BDFA002FA07B /* ListPagerLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A255C0221B1BDFA002FA07B /* ListPagerLab.swift */; };
+		3A362AE021B2EF1E006FEF66 /* ListPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A362ADF21B2EF1E006FEF66 /* ListPagerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3A255BFD21B1BDA5002FA07B /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		3A255C0021B1BDDC002FA07B /* ListPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPager.swift; sourceTree = "<group>"; };
 		3A255C0221B1BDFA002FA07B /* ListPagerLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPagerLab.swift; sourceTree = "<group>"; };
+		3A362ADF21B2EF1E006FEF66 /* ListPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPagerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				3A255BF621B1BA1E002FA07B /* MainTableViewController.swift */,
 				3A255BF821B1BA32002FA07B /* MainTableViewCell.swift */,
+				3A362ADF21B2EF1E006FEF66 /* ListPagerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			files = (
 				3A255BFE21B1BDA5002FA07B /* MainMenu.swift in Sources */,
 				3A255BFC21B1BD76002FA07B /* Begin3x3.swift in Sources */,
+				3A362AE021B2EF1E006FEF66 /* ListPagerViewController.swift in Sources */,
 				3A255C0321B1BDFA002FA07B /* ListPagerLab.swift in Sources */,
 				3A255BF721B1BA1E002FA07B /* MainTableViewController.swift in Sources */,
 				3A255BF921B1BA32002FA07B /* MainTableViewCell.swift in Sources */,
