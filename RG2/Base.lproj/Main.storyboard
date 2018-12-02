@@ -35,8 +35,8 @@
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4a-6X-aFK">
                                             <rect key="frame" x="85" y="10" width="280" height="64.5"/>
-                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
-                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                            <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -65,7 +65,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c7M-tk-EmQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="777" y="135"/>
+            <point key="canvasLocation" x="776.79999999999995" y="134.48275862068968"/>
         </scene>
         <!--List Pager View Controller-->
         <scene sceneID="KNg-JM-txs">
@@ -90,37 +90,37 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="6lp-LS-mr5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="21"/>
                                 <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DescriptionText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ftx-9B-CKr">
-                                <rect key="frame" x="16" y="152" width="343" height="495"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Description Text" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="nm9-z1-Lxa">
+                                <rect key="frame" x="10" y="154" width="355" height="503"/>
                                 <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gKL-6n-bAz" firstAttribute="trailing" secondItem="Ftx-9B-CKr" secondAttribute="trailing" constant="16" id="3jA-ue-PhC"/>
-                            <constraint firstItem="gKL-6n-bAz" firstAttribute="bottom" secondItem="Ftx-9B-CKr" secondAttribute="bottom" constant="20" id="8nQ-v0-dbG"/>
+                            <constraint firstItem="nm9-z1-Lxa" firstAttribute="top" secondItem="can-oF-fLe" secondAttribute="bottom" constant="10" id="GAI-KZ-UGq"/>
                             <constraint firstItem="iet-xt-als" firstAttribute="bottom" secondItem="gKL-6n-bAz" secondAttribute="bottom" id="Ixb-1F-RUb"/>
                             <constraint firstItem="iet-xt-als" firstAttribute="top" secondItem="gKL-6n-bAz" secondAttribute="top" id="JmM-9B-EME"/>
-                            <constraint firstItem="Ftx-9B-CKr" firstAttribute="leading" secondItem="gKL-6n-bAz" secondAttribute="leading" constant="16" id="L46-eI-2rd"/>
                             <constraint firstItem="8q5-ZP-M1u" firstAttribute="leading" secondItem="can-oF-fLe" secondAttribute="trailing" constant="10" id="MeV-h2-Vpv"/>
+                            <constraint firstItem="gKL-6n-bAz" firstAttribute="trailing" secondItem="nm9-z1-Lxa" secondAttribute="trailing" constant="10" id="Nec-mh-PDH"/>
                             <constraint firstItem="can-oF-fLe" firstAttribute="top" secondItem="gKL-6n-bAz" secondAttribute="top" constant="10" id="WsD-lp-gU4"/>
                             <constraint firstItem="iet-xt-als" firstAttribute="trailing" secondItem="gKL-6n-bAz" secondAttribute="trailing" id="cN9-Tf-vpW"/>
                             <constraint firstItem="iet-xt-als" firstAttribute="leading" secondItem="gKL-6n-bAz" secondAttribute="leading" id="d9v-IK-YXv"/>
                             <constraint firstItem="8q5-ZP-M1u" firstAttribute="top" secondItem="gKL-6n-bAz" secondAttribute="top" constant="10" id="eAr-ng-T8A"/>
-                            <constraint firstItem="Ftx-9B-CKr" firstAttribute="top" secondItem="can-oF-fLe" secondAttribute="bottom" constant="8" id="h2q-Vo-gPo"/>
+                            <constraint firstItem="gKL-6n-bAz" firstAttribute="bottom" secondItem="nm9-z1-Lxa" secondAttribute="bottom" constant="10" id="eDn-SM-7Jf"/>
+                            <constraint firstItem="nm9-z1-Lxa" firstAttribute="leading" secondItem="gKL-6n-bAz" secondAttribute="leading" constant="10" id="i08-58-FTr"/>
                             <constraint firstItem="can-oF-fLe" firstAttribute="leading" secondItem="gKL-6n-bAz" secondAttribute="leading" constant="10" id="jb5-GQ-cbX"/>
                             <constraint firstItem="gKL-6n-bAz" firstAttribute="trailing" secondItem="8q5-ZP-M1u" secondAttribute="trailing" constant="16" id="mXw-r0-Lli"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gKL-6n-bAz"/>
                     </view>
                     <connections>
-                        <outlet property="descriptionText" destination="Ftx-9B-CKr" id="4kC-kx-RYo"/>
+                        <outlet property="descriptionText" destination="nm9-z1-Lxa" id="gWQ-Cf-26M"/>
                         <outlet property="titleImage" destination="can-oF-fLe" id="VZX-9h-pRm"/>
                         <outlet property="titleText" destination="8q5-ZP-M1u" id="JIT-5n-pvO"/>
                     </connections>

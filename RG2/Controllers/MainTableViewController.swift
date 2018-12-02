@@ -24,6 +24,8 @@ class MainTableViewController: UITableViewController {
         super.viewDidLoad()
 
         lps = ListPagerLab.shared.getPhaseList(phase: currentPhase)
+        self.tableView.backgroundColor = #colorLiteral(red: 0.1331707835, green: 0.2263257504, blue: 0.1357842982, alpha: 1)
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
     }
 
@@ -37,6 +39,10 @@ class MainTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return lps.count
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
