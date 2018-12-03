@@ -7,15 +7,14 @@
 //
 
 import UIKit
-import youtube_ios_player_helper
+import YouTubePlayer
 
-class ListPagerViewController: UIViewController {
+class ListPagerViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var titleImage: UIImageView!
     @IBOutlet weak var titleText: UILabel!
     @IBOutlet weak var descriptionText: UITextView!
-    @IBOutlet weak var descriptionTextHC: NSLayoutConstraint!
-    @IBOutlet weak var ytPlayer: YTPlayerView!
+    @IBOutlet var ytPlayer: YouTubePlayerView!
     
     var phase = ""
     var id = 0
@@ -39,26 +38,31 @@ class ListPagerViewController: UIViewController {
 //            "<b>bold text</b>" +
         "</body></head></html>"
         
-        //let htmlData = NSString(string: lp.description).data(using: String.Encoding.unicode.rawValue)
         let htmlData = NSString(string: htmlString).data(using: String.Encoding.unicode.rawValue)
-        
         let options = [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html]
-        
         let attributedString = try! NSAttributedString(data: htmlData!, options: options, documentAttributes: nil)
-        
         descriptionText.attributedText = attributedString
-        //descriptionTextHC.constant = self.descriptionText.contentSize.height
         
         
 
         // назначаем делегата, чтобы текствью мог следить за собой
-        //        descriptionText.delegate = self
+        descriptionText.delegate = self
         
-        //ytPlayer.load(withVideoId: "lomQe1c9WHI")
+        // Load video from YouTube ID
+        //ytPlayer.loadVideoID("nfWlot6h_JM")
+        // Load video from YouTube URL
+        //let myVideoURL = NSURL(string: "https://www.youtube.com/watch?v=wQg3bXrVLtg")
+        //ytPlayer.loadVideoURL(myVideoURL!)
        
     }
     
-
+    internal func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        print (URL)
+        // чтобы не открывать ссылку в браузере возвращаем false
+        return false
+    }
+    
+    
     /*
     // MARK: - Navigation
 
@@ -73,7 +77,7 @@ class ListPagerViewController: UIViewController {
     
 }
 
-extension ListPagerViewController: UITextViewDelegate {
+//extension ListPagerViewController: UITextViewDelegate {
     //    func textView(textView: UITextView, shouldInteractWithURL URL: NSURL, inRange characterRange: NSRange) -> Bool {
     //
     //        //let webViewController = WebViewController()
@@ -88,5 +92,5 @@ extension ListPagerViewController: UITextViewDelegate {
     //            return true
     //        }
     //    }
-}
+//}
 
