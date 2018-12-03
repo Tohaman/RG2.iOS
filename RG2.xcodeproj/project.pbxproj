@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B4F9E5115E1874AEDC2DEF6 /* Pods_RG2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9823C93373549609456210EB /* Pods_RG2.framework */; };
 		3A255BE421B1A1EB002FA07B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A255BE321B1A1EB002FA07B /* AppDelegate.swift */; };
 		3A255BE921B1A1EB002FA07B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A255BE721B1A1EB002FA07B /* Main.storyboard */; };
 		3A255BEB21B1A1EB002FA07B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A255BEA21B1A1EB002FA07B /* Assets.xcassets */; };
@@ -19,6 +20,18 @@
 		3A255C0321B1BDFA002FA07B /* ListPagerLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A255C0221B1BDFA002FA07B /* ListPagerLab.swift */; };
 		3A362AE021B2EF1E006FEF66 /* ListPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A362ADF21B2EF1E006FEF66 /* ListPagerViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		3A0A0D1021B4F7E300E6707C /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
 		3A255BE021B1A1EB002FA07B /* RG2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RG2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +47,9 @@
 		3A255C0021B1BDDC002FA07B /* ListPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPager.swift; sourceTree = "<group>"; };
 		3A255C0221B1BDFA002FA07B /* ListPagerLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPagerLab.swift; sourceTree = "<group>"; };
 		3A362ADF21B2EF1E006FEF66 /* ListPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPagerViewController.swift; sourceTree = "<group>"; };
+		9823C93373549609456210EB /* Pods_RG2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RG2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7723AC2BA69F48D95FE7BA9 /* Pods-RG2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RG2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RG2/Pods-RG2.debug.xcconfig"; sourceTree = "<group>"; };
+		F57566168E6668C69C9AE973 /* Pods-RG2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RG2.release.xcconfig"; path = "Pods/Target Support Files/Pods-RG2/Pods-RG2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +57,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B4F9E5115E1874AEDC2DEF6 /* Pods_RG2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A44CCB3C3C6405633E86BAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9823C93373549609456210EB /* Pods_RG2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3A255BD721B1A1EB002FA07B = {
 			isa = PBXGroup;
 			children = (
 				3A255BE221B1A1EB002FA07B /* RG2 */,
 				3A255BE121B1A1EB002FA07B /* Products */,
+				C352B84C44B1657EF7EBFF8F /* Pods */,
+				1A44CCB3C3C6405633E86BAF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +133,15 @@
 			path = ListPagerLab;
 			sourceTree = "<group>";
 		};
+		C352B84C44B1657EF7EBFF8F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7723AC2BA69F48D95FE7BA9 /* Pods-RG2.debug.xcconfig */,
+				F57566168E6668C69C9AE973 /* Pods-RG2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,11 +149,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A255BF221B1A1EB002FA07B /* Build configuration list for PBXNativeTarget "RG2" */;
 			buildPhases = (
+				0FF5F709BA29C2B62CA277EF /* [CP] Check Pods Manifest.lock */,
 				3A255BDC21B1A1EB002FA07B /* Sources */,
 				3A255BDD21B1A1EB002FA07B /* Frameworks */,
 				3A255BDE21B1A1EB002FA07B /* Resources */,
+				A8C4198E66610A9EB8D20329 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
+				3A0A0D1021B4F7E300E6707C /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -171,6 +210,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FF5F709BA29C2B62CA277EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RG2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8C4198E66610A9EB8D20329 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RG2/Pods-RG2-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/youtube-ios-player-helper/youtube_ios_player_helper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/youtube_ios_player_helper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RG2/Pods-RG2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3A255BDC21B1A1EB002FA07B /* Sources */ = {
@@ -328,6 +414,7 @@
 		};
 		3A255BF321B1A1EB002FA07B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7723AC2BA69F48D95FE7BA9 /* Pods-RG2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -346,6 +433,7 @@
 		};
 		3A255BF421B1A1EB002FA07B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F57566168E6668C69C9AE973 /* Pods-RG2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct ListPager {
     var phase: String
@@ -19,4 +20,9 @@ struct ListPager {
     //    var subID : String = ""
     //    var subTitle : String = ""
     //    var subLongTitle: String = ""
+    
+    func getImage() -> UIImage?
+    {
+        return UIImage(named: self.image)
+    }
 }
