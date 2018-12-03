@@ -75,39 +75,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Qog-hd-62f">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eP0-om-gEg">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rO0-rh-inq" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="262"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_begin" translatesAutoresizingMaskIntoConstraints="NO" id="YiN-uX-iCL">
-                                                <rect key="frame" x="8" y="0.0" width="70" height="70"/>
+                                                <rect key="frame" x="8" y="8" width="70" height="70"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="2Kb-FZ-m2l"/>
                                                     <constraint firstAttribute="width" constant="70" id="JjI-L6-pfx"/>
                                                 </constraints>
                                             </imageView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Hz-De-PRp">
-                                                <rect key="frame" x="0.0" y="78" width="375" height="183.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="TextView" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Hz-De-PRp">
+                                                <rect key="frame" x="8" y="86" width="359" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="0Hz-De-PRp" firstAttribute="leading" secondItem="rO0-rh-inq" secondAttribute="leading" id="3jp-81-kv9"/>
-                                            <constraint firstAttribute="bottom" secondItem="0Hz-De-PRp" secondAttribute="bottom" constant="0.5" id="Oe0-sb-kYk"/>
+                                            <constraint firstItem="0Hz-De-PRp" firstAttribute="leading" secondItem="rO0-rh-inq" secondAttribute="leading" constant="8" id="3jp-81-kv9"/>
+                                            <constraint firstAttribute="bottom" secondItem="0Hz-De-PRp" secondAttribute="bottom" constant="8" id="Oe0-sb-kYk"/>
                                             <constraint firstItem="0Hz-De-PRp" firstAttribute="top" secondItem="YiN-uX-iCL" secondAttribute="bottom" constant="8" id="TuE-6F-u4F"/>
                                             <constraint firstItem="YiN-uX-iCL" firstAttribute="leading" secondItem="rO0-rh-inq" secondAttribute="leading" constant="8" id="pKd-US-rOq"/>
-                                            <constraint firstItem="YiN-uX-iCL" firstAttribute="top" secondItem="rO0-rh-inq" secondAttribute="top" id="s1P-v6-PyJ"/>
-                                            <constraint firstAttribute="trailing" secondItem="0Hz-De-PRp" secondAttribute="trailing" id="uI9-58-Z24"/>
+                                            <constraint firstItem="YiN-uX-iCL" firstAttribute="top" secondItem="rO0-rh-inq" secondAttribute="top" constant="8" id="s1P-v6-PyJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="0Hz-De-PRp" secondAttribute="trailing" constant="8" id="uI9-58-Z24"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.3311834623767056" green="0.69678076713012849" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="rO0-rh-inq" firstAttribute="top" secondItem="eP0-om-gEg" secondAttribute="top" id="2CS-zs-hSI"/>
                                     <constraint firstItem="rO0-rh-inq" firstAttribute="width" secondItem="eP0-om-gEg" secondAttribute="width" id="ILE-by-Ca5"/>
@@ -123,6 +122,10 @@
                             <constraint firstItem="eP0-om-gEg" firstAttribute="leading" secondItem="gKL-6n-bAz" secondAttribute="leading" id="PFX-PM-R9E"/>
                             <constraint firstItem="eP0-om-gEg" firstAttribute="trailing" secondItem="gKL-6n-bAz" secondAttribute="trailing" id="Tgo-g4-Kom"/>
                             <constraint firstItem="eP0-om-gEg" firstAttribute="top" secondItem="gKL-6n-bAz" secondAttribute="top" id="W2n-g2-n2H"/>
+                            <constraint firstItem="Qog-hd-62f" firstAttribute="bottom" secondItem="gKL-6n-bAz" secondAttribute="bottom" id="b6L-Y9-lxz"/>
+                            <constraint firstItem="Qog-hd-62f" firstAttribute="trailing" secondItem="gKL-6n-bAz" secondAttribute="trailing" id="e6r-wA-0XP"/>
+                            <constraint firstItem="Qog-hd-62f" firstAttribute="leading" secondItem="gKL-6n-bAz" secondAttribute="leading" id="lch-rT-CKv"/>
+                            <constraint firstItem="Qog-hd-62f" firstAttribute="top" secondItem="pgK-aP-BHQ" secondAttribute="top" id="yV0-Y6-g28"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gKL-6n-bAz"/>
                     </view>
@@ -154,6 +157,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Background" width="375" height="667"/>
         <image name="ic_begin" width="70" height="70"/>
         <image name="main_1" width="70" height="70"/>
     </resources>
