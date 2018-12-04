@@ -12,6 +12,7 @@ class MainTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleTextView: UILabel!
     @IBOutlet weak var titleImageView: UIImageView!
+    @IBOutlet weak var titleComment: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

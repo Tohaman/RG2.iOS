@@ -51,6 +51,8 @@ class MainTableViewController: UITableViewController {
         cell.titleTextView.text = lps[indexPath.row].title
         let imageName = lps[indexPath.row].image + ".pdf"
         cell.titleImageView.image = UIImage(named: imageName)
+        cell.titleComment.text = lps[indexPath.row].comment
+        //cell.titleComment.text = "тут какой-то комментарий"
         
         return cell
     }

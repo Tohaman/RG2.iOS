@@ -24,7 +24,6 @@ class ListPagerViewController: UIViewController, UITextViewDelegate {
         let lp = ListPagerLab.shared.getPhaseItem(phase: phase, id: id)
         titleImage.image = lp.getImage()
         titleText.text = lp.title
-        //#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
 
         let htmlString = "<html><head>" +
             "<style>" +
@@ -39,24 +38,29 @@ class ListPagerViewController: UIViewController, UITextViewDelegate {
         let options = [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html]
         let attributedString = try! NSAttributedString(data: htmlData!, options: options, documentAttributes: nil)
         descriptionText.attributedText = attributedString
-        
-        
 
         // назначаем делегата, чтобы текствью мог следить за собой
         descriptionText.delegate = self
         
         // Load video from YouTube ID
-        //ytPlayer.loadVideoID("nfWlot6h_JM")
+        ytPlayer.loadVideoID(lp.url)
+        
         // Load video from YouTube URL
-        //let myVideoURL = NSURL(string: "https://www.youtube.com/watch?v=wQg3bXrVLtg")
+        //let myVideoURL = NSURL(string: "https://www.youtube.com/watch?v=GNp6Xe5_tXU")
         //ytPlayer.loadVideoURL(myVideoURL!)
-       
     }
     
     internal func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
-        print (URL)
-        // чтобы не открывать ссылку в браузере возвращаем false
-        return false
+        //Если URL вида rg2://ytplay?time=2:12&link=0TvO_rpG_aM, то обрабатываем его тут, иначе открываем ссылку в браузере
+        var stringUrl = URL.absoluteString
+        if stringUrl.hasPrefix("rg2://ytplay?") {
+            var stringUrls = stringUrl.dropFirst(12)
+            print (stringUrls)
+            // чтобы не открывать ссылку в браузере возвращаем false
+            return false}
+        else {
+            return true
+        }
     }
     
     

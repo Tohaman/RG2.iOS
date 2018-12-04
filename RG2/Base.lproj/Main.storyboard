@@ -33,23 +33,32 @@
                                                 <constraint firstAttribute="width" constant="65" id="ybt-Xt-8Xd"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4a-6X-aFK">
-                                            <rect key="frame" x="85" y="10" width="280" height="64.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TitleText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4a-6X-aFK">
+                                            <rect key="frame" x="85" y="10" width="280" height="40"/>
                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
                                             <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="k3R-xL-bKf">
+                                            <rect key="frame" x="85" y="36" width="274" height="18"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Abm-KA-6uz" firstAttribute="leading" secondItem="L50-ff-QPV" secondAttribute="leading" constant="10" id="61X-Lv-wAY"/>
-                                        <constraint firstItem="k4a-6X-aFK" firstAttribute="leading" secondItem="Abm-KA-6uz" secondAttribute="trailing" constant="10" id="8aS-la-VjB"/>
-                                        <constraint firstItem="k4a-6X-aFK" firstAttribute="top" secondItem="L50-ff-QPV" secondAttribute="top" constant="10" id="Rz4-xc-RiE"/>
-                                        <constraint firstAttribute="bottom" secondItem="k4a-6X-aFK" secondAttribute="bottom" constant="10" id="dJo-uU-1XY"/>
+                                        <constraint firstItem="k4a-6X-aFK" firstAttribute="leading" secondItem="Abm-KA-6uz" secondAttribute="trailing" constant="10" id="D28-nT-Wc9"/>
+                                        <constraint firstItem="k3R-xL-bKf" firstAttribute="top" secondItem="k4a-6X-aFK" secondAttribute="bottom" constant="4" id="Uek-Zj-iWU"/>
+                                        <constraint firstItem="k4a-6X-aFK" firstAttribute="top" secondItem="L50-ff-QPV" secondAttribute="top" constant="10" id="ZMv-fK-cgI"/>
+                                        <constraint firstAttribute="trailing" secondItem="k3R-xL-bKf" secondAttribute="trailing" constant="16" id="arA-0a-cti"/>
+                                        <constraint firstAttribute="trailing" secondItem="k4a-6X-aFK" secondAttribute="trailing" constant="10" id="oKa-Ch-vjk"/>
                                         <constraint firstItem="Abm-KA-6uz" firstAttribute="top" secondItem="L50-ff-QPV" secondAttribute="top" constant="10" id="qqD-Nv-R2d"/>
-                                        <constraint firstAttribute="trailing" secondItem="k4a-6X-aFK" secondAttribute="trailing" constant="10" id="ucl-6f-bxA"/>
+                                        <constraint firstItem="k3R-xL-bKf" firstAttribute="leading" secondItem="Abm-KA-6uz" secondAttribute="trailing" constant="10" id="u57-d8-ZhP"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="titleComment" destination="k3R-xL-bKf" id="n2y-cn-Bco"/>
                                     <outlet property="titleImageView" destination="Abm-KA-6uz" id="rKq-qL-aPg"/>
                                     <outlet property="titleTextView" destination="k4a-6X-aFK" id="Muy-bX-hyt"/>
                                     <segue destination="mE3-gM-EML" kind="show" identifier="listPagerSegue" id="Lxg-Yh-txU"/>
@@ -82,7 +91,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rO0-rh-inq" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="317"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_begin" translatesAutoresizingMaskIntoConstraints="NO" id="YiN-uX-iCL">
                                                 <rect key="frame" x="8" y="8" width="70" height="70"/>
@@ -93,6 +102,7 @@
                                             </imageView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="TextView" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Hz-De-PRp">
                                                 <rect key="frame" x="8" y="86" width="359" height="33"/>
+                                                <color key="tintColor" red="1" green="0.48381632579304013" blue="0.01194518120417376" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -104,11 +114,22 @@
                                                 <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPX-b2-fWY" customClass="YouTubePlayerView" customModule="YouTubePlayer">
+                                                <rect key="frame" x="8" y="115" width="359" height="202"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="SPX-b2-fWY" secondAttribute="height" multiplier="16:9" id="d2r-j5-VIX"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="SPX-b2-fWY" secondAttribute="trailing" constant="8" id="0gd-Kr-Geg"/>
                                             <constraint firstItem="0Hz-De-PRp" firstAttribute="leading" secondItem="rO0-rh-inq" secondAttribute="leading" constant="8" id="3jp-81-kv9"/>
-                                            <constraint firstAttribute="bottom" secondItem="0Hz-De-PRp" secondAttribute="bottom" constant="8" id="Oe0-sb-kYk"/>
+                                            <constraint firstItem="SPX-b2-fWY" firstAttribute="centerX" secondItem="rO0-rh-inq" secondAttribute="centerX" id="5h6-KT-wFN"/>
+                                            <constraint firstAttribute="bottom" secondItem="SPX-b2-fWY" secondAttribute="bottom" id="BK7-dQ-cX1"/>
+                                            <constraint firstItem="SPX-b2-fWY" firstAttribute="top" secondItem="0Hz-De-PRp" secondAttribute="bottom" constant="-4" id="S4W-Yf-Hrz"/>
                                             <constraint firstItem="0Hz-De-PRp" firstAttribute="top" secondItem="YiN-uX-iCL" secondAttribute="bottom" constant="8" id="TuE-6F-u4F"/>
+                                            <constraint firstItem="SPX-b2-fWY" firstAttribute="leading" secondItem="rO0-rh-inq" secondAttribute="leading" constant="8" id="kUB-Ei-plJ"/>
                                             <constraint firstItem="YiN-uX-iCL" firstAttribute="leading" secondItem="rO0-rh-inq" secondAttribute="leading" constant="8" id="pKd-US-rOq"/>
                                             <constraint firstItem="YiN-uX-iCL" firstAttribute="top" secondItem="rO0-rh-inq" secondAttribute="top" constant="8" id="s1P-v6-PyJ"/>
                                             <constraint firstAttribute="trailing" secondItem="0Hz-De-PRp" secondAttribute="trailing" constant="8" id="uI9-58-Z24"/>
@@ -141,6 +162,7 @@
                         <outlet property="descriptionText" destination="0Hz-De-PRp" id="Owf-0y-M2S"/>
                         <outlet property="titleImage" destination="YiN-uX-iCL" id="PFy-BX-g6T"/>
                         <outlet property="titleText" destination="GjB-Xc-wgr" id="Zj2-mQ-IBv"/>
+                        <outlet property="ytPlayer" destination="SPX-b2-fWY" id="PJA-Kb-D0v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hlH-zu-NnY" userLabel="First Responder" sceneMemberID="firstResponder"/>
