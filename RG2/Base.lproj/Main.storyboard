@@ -93,9 +93,17 @@
                                             </imageView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="TextView" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Hz-De-PRp">
                                                 <rect key="frame" x="8" y="86" width="359" height="33"/>
+                                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjB-Xc-wgr">
+                                                <rect key="frame" x="88" y="8" width="279" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="0Hz-De-PRp" firstAttribute="leading" secondItem="rO0-rh-inq" secondAttribute="leading" constant="8" id="3jp-81-kv9"/>
@@ -131,6 +139,8 @@
                     </view>
                     <connections>
                         <outlet property="descriptionText" destination="0Hz-De-PRp" id="Owf-0y-M2S"/>
+                        <outlet property="titleImage" destination="YiN-uX-iCL" id="PFy-BX-g6T"/>
+                        <outlet property="titleText" destination="GjB-Xc-wgr" id="Zj2-mQ-IBv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hlH-zu-NnY" userLabel="First Responder" sceneMemberID="firstResponder"/>

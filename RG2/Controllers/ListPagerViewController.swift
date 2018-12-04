@@ -22,8 +22,8 @@ class ListPagerViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         let lp = ListPagerLab.shared.getPhaseItem(phase: phase, id: id)
-//        titleImage.image = lp.getImage()
-//        titleText.text = lp.title
+        titleImage.image = lp.getImage()
+        titleText.text = lp.title
         //#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
 
         let htmlString = "<html><head>" +
@@ -31,12 +31,9 @@ class ListPagerViewController: UIViewController, UITextViewDelegate {
             "body {color: rgb(242, 173, 33); font-family: 'Arial'; text-decoration:none; font-size: 15px}" +
             "</style>" +
             "</head>" +
-            "<body>" +
+            "</body>" +
             "\(lp.description)" +
-//            "<h1>A title</h1>" +
-//            "<p>A paragraph</p>" +
-//            "<b>bold text</b>" +
-        "</body></head></html>"
+        "</head></html>"
         
         let htmlData = NSString(string: htmlString).data(using: String.Encoding.unicode.rawValue)
         let options = [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html]
