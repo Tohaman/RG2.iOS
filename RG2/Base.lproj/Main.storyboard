@@ -113,13 +113,17 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPX-b2-fWY" customClass="WKYTPlayerView">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPX-b2-fWY" customClass="YTPlayerView" customModule="youtube_ios_player_helper_swift">
                                                 <rect key="frame" x="8" y="115" width="359" height="202"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="SPX-b2-fWY" secondAttribute="height" multiplier="16:9" id="d2r-j5-VIX"/>
                                                 </constraints>
                                             </view>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="c2K-Np-fgx" userLabel="Loading Movie Indicator">
+                                                <rect key="frame" x="169" y="197.5" width="37" height="37"/>
+                                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </activityIndicatorView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="SPX-b2-fWY" secondAttribute="trailing" constant="8" id="0gd-Kr-Geg"/>
@@ -127,9 +131,11 @@
                                             <constraint firstItem="SPX-b2-fWY" firstAttribute="centerX" secondItem="rO0-rh-inq" secondAttribute="centerX" id="5h6-KT-wFN"/>
                                             <constraint firstAttribute="trailing" secondItem="GjB-Xc-wgr" secondAttribute="trailing" constant="8" id="AL7-vN-DIF"/>
                                             <constraint firstAttribute="bottom" secondItem="SPX-b2-fWY" secondAttribute="bottom" id="BK7-dQ-cX1"/>
+                                            <constraint firstItem="c2K-Np-fgx" firstAttribute="centerX" secondItem="SPX-b2-fWY" secondAttribute="centerX" id="IjM-O2-9Ci"/>
                                             <constraint firstItem="GjB-Xc-wgr" firstAttribute="top" secondItem="rO0-rh-inq" secondAttribute="top" constant="8" id="Ljo-3o-oBm"/>
                                             <constraint firstItem="SPX-b2-fWY" firstAttribute="top" secondItem="0Hz-De-PRp" secondAttribute="bottom" constant="-4" id="S4W-Yf-Hrz"/>
                                             <constraint firstItem="0Hz-De-PRp" firstAttribute="top" secondItem="YiN-uX-iCL" secondAttribute="bottom" constant="8" id="TuE-6F-u4F"/>
+                                            <constraint firstItem="c2K-Np-fgx" firstAttribute="centerY" secondItem="SPX-b2-fWY" secondAttribute="centerY" id="V5q-sZ-06x"/>
                                             <constraint firstItem="GjB-Xc-wgr" firstAttribute="leading" secondItem="YiN-uX-iCL" secondAttribute="trailing" constant="10" id="WvT-i7-1dn"/>
                                             <constraint firstItem="GjB-Xc-wgr" firstAttribute="bottom" secondItem="YiN-uX-iCL" secondAttribute="bottom" id="YmR-WP-6aQ"/>
                                             <constraint firstItem="SPX-b2-fWY" firstAttribute="leading" secondItem="rO0-rh-inq" secondAttribute="leading" constant="8" id="kUB-Ei-plJ"/>
@@ -163,6 +169,7 @@
                     </view>
                     <connections>
                         <outlet property="descriptionText" destination="0Hz-De-PRp" id="Owf-0y-M2S"/>
+                        <outlet property="loadingMovieIndicator" destination="c2K-Np-fgx" id="nRe-vr-hUP"/>
                         <outlet property="titleImage" destination="YiN-uX-iCL" id="PFy-BX-g6T"/>
                         <outlet property="titleText" destination="GjB-Xc-wgr" id="Zj2-mQ-IBv"/>
                         <outlet property="ytPlayer" destination="SPX-b2-fWY" id="PJA-Kb-D0v"/>

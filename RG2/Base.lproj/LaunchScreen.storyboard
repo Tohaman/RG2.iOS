@@ -21,11 +21,20 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Loading" translatesAutoresizingMaskIntoConstraints="NO" id="OLO-Jt-z1U">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="TeJ-M8-tgv">
+                                <rect key="frame" x="123" y="213" width="129" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TeJ-M8-tgv" secondAttribute="height" multiplier="1:1" id="Gon-Sl-JxK"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="OLO-Jt-z1U" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DR5-hv-7nG"/>
+                            <constraint firstItem="TeJ-M8-tgv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="193" id="Ncs-pX-ri2"/>
                             <constraint firstItem="OLO-Jt-z1U" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZwC-Sn-s13"/>
+                            <constraint firstItem="TeJ-M8-tgv" firstAttribute="centerX" secondItem="OLO-Jt-z1U" secondAttribute="centerX" id="cNL-5W-XY1"/>
+                            <constraint firstItem="TeJ-M8-tgv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="123" id="jZ0-H0-sMf"/>
                             <constraint firstItem="OLO-Jt-z1U" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="nHl-tb-0nx"/>
                             <constraint firstItem="OLO-Jt-z1U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rVU-8M-phh"/>
                         </constraints>
@@ -39,5 +48,6 @@
     </scenes>
     <resources>
         <image name="Loading" width="375" height="667"/>
+        <image name="icon" width="128" height="128"/>
     </resources>
 </document>
