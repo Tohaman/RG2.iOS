@@ -26,7 +26,9 @@ class MainTableViewController: UITableViewController {
         lps = ListPagerLab.shared.getPhaseList(phase: currentPhase)
         self.tableView.backgroundColor = #colorLiteral(red: 0.1331707835, green: 0.2263257504, blue: 0.1357842982, alpha: 1)
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-        
+        //стиль кнопочки "назад"
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
     }
 
     // MARK: - Table view data source

@@ -33,8 +33,8 @@
                                                 <constraint firstAttribute="width" constant="65" id="ybt-Xt-8Xd"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TitleText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4a-6X-aFK">
-                                            <rect key="frame" x="85" y="10" width="280" height="40"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TitleText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4a-6X-aFK">
+                                            <rect key="frame" x="85" y="10" width="274" height="22"/>
                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
                                             <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -52,7 +52,7 @@
                                         <constraint firstItem="k3R-xL-bKf" firstAttribute="top" secondItem="k4a-6X-aFK" secondAttribute="bottom" constant="4" id="Uek-Zj-iWU"/>
                                         <constraint firstItem="k4a-6X-aFK" firstAttribute="top" secondItem="L50-ff-QPV" secondAttribute="top" constant="10" id="ZMv-fK-cgI"/>
                                         <constraint firstAttribute="trailing" secondItem="k3R-xL-bKf" secondAttribute="trailing" constant="16" id="arA-0a-cti"/>
-                                        <constraint firstAttribute="trailing" secondItem="k4a-6X-aFK" secondAttribute="trailing" constant="10" id="oKa-Ch-vjk"/>
+                                        <constraint firstAttribute="trailing" secondItem="k4a-6X-aFK" secondAttribute="trailing" constant="16" id="oKa-Ch-vjk"/>
                                         <constraint firstItem="Abm-KA-6uz" firstAttribute="top" secondItem="L50-ff-QPV" secondAttribute="top" constant="10" id="qqD-Nv-R2d"/>
                                         <constraint firstItem="k3R-xL-bKf" firstAttribute="leading" secondItem="Abm-KA-6uz" secondAttribute="trailing" constant="10" id="u57-d8-ZhP"/>
                                     </constraints>
@@ -85,7 +85,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Qog-hd-62f">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eP0-om-gEg">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
@@ -100,6 +100,12 @@
                                                     <constraint firstAttribute="width" constant="70" id="JjI-L6-pfx"/>
                                                 </constraints>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjB-Xc-wgr">
+                                                <rect key="frame" x="88" y="8" width="279" height="70"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="TextView" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Hz-De-PRp">
                                                 <rect key="frame" x="8" y="86" width="359" height="33"/>
                                                 <color key="tintColor" red="1" green="0.48381632579304013" blue="0.01194518120417376" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -107,14 +113,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjB-Xc-wgr">
-                                                <rect key="frame" x="88" y="8" width="279" height="70"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
-                                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPX-b2-fWY" customClass="YouTubePlayerView" customModule="YouTubePlayer">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPX-b2-fWY" customClass="WKYTPlayerView">
                                                 <rect key="frame" x="8" y="115" width="359" height="202"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -126,9 +125,13 @@
                                             <constraint firstAttribute="trailing" secondItem="SPX-b2-fWY" secondAttribute="trailing" constant="8" id="0gd-Kr-Geg"/>
                                             <constraint firstItem="0Hz-De-PRp" firstAttribute="leading" secondItem="rO0-rh-inq" secondAttribute="leading" constant="8" id="3jp-81-kv9"/>
                                             <constraint firstItem="SPX-b2-fWY" firstAttribute="centerX" secondItem="rO0-rh-inq" secondAttribute="centerX" id="5h6-KT-wFN"/>
+                                            <constraint firstAttribute="trailing" secondItem="GjB-Xc-wgr" secondAttribute="trailing" constant="8" id="AL7-vN-DIF"/>
                                             <constraint firstAttribute="bottom" secondItem="SPX-b2-fWY" secondAttribute="bottom" id="BK7-dQ-cX1"/>
+                                            <constraint firstItem="GjB-Xc-wgr" firstAttribute="top" secondItem="rO0-rh-inq" secondAttribute="top" constant="8" id="Ljo-3o-oBm"/>
                                             <constraint firstItem="SPX-b2-fWY" firstAttribute="top" secondItem="0Hz-De-PRp" secondAttribute="bottom" constant="-4" id="S4W-Yf-Hrz"/>
                                             <constraint firstItem="0Hz-De-PRp" firstAttribute="top" secondItem="YiN-uX-iCL" secondAttribute="bottom" constant="8" id="TuE-6F-u4F"/>
+                                            <constraint firstItem="GjB-Xc-wgr" firstAttribute="leading" secondItem="YiN-uX-iCL" secondAttribute="trailing" constant="10" id="WvT-i7-1dn"/>
+                                            <constraint firstItem="GjB-Xc-wgr" firstAttribute="bottom" secondItem="YiN-uX-iCL" secondAttribute="bottom" id="YmR-WP-6aQ"/>
                                             <constraint firstItem="SPX-b2-fWY" firstAttribute="leading" secondItem="rO0-rh-inq" secondAttribute="leading" constant="8" id="kUB-Ei-plJ"/>
                                             <constraint firstItem="YiN-uX-iCL" firstAttribute="leading" secondItem="rO0-rh-inq" secondAttribute="leading" constant="8" id="pKd-US-rOq"/>
                                             <constraint firstItem="YiN-uX-iCL" firstAttribute="top" secondItem="rO0-rh-inq" secondAttribute="top" constant="8" id="s1P-v6-PyJ"/>
@@ -141,7 +144,7 @@
                                     <constraint firstItem="rO0-rh-inq" firstAttribute="width" secondItem="eP0-om-gEg" secondAttribute="width" id="ILE-by-Ca5"/>
                                     <constraint firstItem="rO0-rh-inq" firstAttribute="leading" secondItem="eP0-om-gEg" secondAttribute="leading" id="Qg4-xG-ezK"/>
                                     <constraint firstAttribute="trailing" secondItem="rO0-rh-inq" secondAttribute="trailing" id="Qj4-1Q-BkA"/>
-                                    <constraint firstAttribute="bottom" secondItem="rO0-rh-inq" secondAttribute="bottom" id="vjg-TF-7Or"/>
+                                    <constraint firstAttribute="bottom" secondItem="rO0-rh-inq" secondAttribute="bottom" constant="286" id="vjg-TF-7Or"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -154,7 +157,7 @@
                             <constraint firstItem="Qog-hd-62f" firstAttribute="bottom" secondItem="gKL-6n-bAz" secondAttribute="bottom" id="b6L-Y9-lxz"/>
                             <constraint firstItem="Qog-hd-62f" firstAttribute="trailing" secondItem="gKL-6n-bAz" secondAttribute="trailing" id="e6r-wA-0XP"/>
                             <constraint firstItem="Qog-hd-62f" firstAttribute="leading" secondItem="gKL-6n-bAz" secondAttribute="leading" id="lch-rT-CKv"/>
-                            <constraint firstItem="Qog-hd-62f" firstAttribute="top" secondItem="pgK-aP-BHQ" secondAttribute="top" id="yV0-Y6-g28"/>
+                            <constraint firstItem="Qog-hd-62f" firstAttribute="top" secondItem="pgK-aP-BHQ" secondAttribute="top" constant="64" id="yV0-Y6-g28"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gKL-6n-bAz"/>
                     </view>
@@ -167,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hlH-zu-NnY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1528.8" y="130.88455772113943"/>
+            <point key="canvasLocation" x="1501.5999999999999" y="133.5832083958021"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Sq8-fe-FGz">
@@ -179,6 +182,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V9p-gq-tjS">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="V8S-dq-TjQ" kind="relationship" relationship="rootViewController" id="64D-j9-gaG"/>
                     </connections>
