@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         //let lps = ListPagerLab.shared
         
+        URLProtocol.registerClass(MyURLProtocol.self)
+        
         //настраиваем верхнюю панель
         UINavigationBar.appearance().tintColor = #colorLiteral(red: 0.1377080679, green: 0.2341583669, blue: 0.1350685358, alpha: 1)
         UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.9102509618, green: 0.5562421679, blue: 0.03188486397, alpha: 1)

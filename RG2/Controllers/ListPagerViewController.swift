@@ -17,6 +17,7 @@ class ListPagerViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var descriptionText: UITextView!
     @IBOutlet var ytPlayer: YTPlayerView! //WKYTPlayerView!
     @IBOutlet weak var loadingMovieIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var playerStackView: UIStackView!
     
     var phase = ""
     var id = 0
@@ -30,11 +31,6 @@ class ListPagerViewController: UIViewController, UITextViewDelegate {
         return false
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        ytPlayer.delegate = self
-//    }
-//
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Показываем навигейшенБар
@@ -44,6 +40,7 @@ class ListPagerViewController: UIViewController, UITextViewDelegate {
         let lp = ListPagerLab.shared.getPhaseItem(phase: phase, id: id)
         titleImage.image = lp.getImage()
         titleText.text = lp.title
+        videoId = lp.url
         
         let htmlString = "<html><head>" +
             "<style>" +
@@ -62,75 +59,80 @@ class ListPagerViewController: UIViewController, UITextViewDelegate {
         // назначаем делегата, чтобы текствью мог следить за собой
         descriptionText.delegate = self
         
-        // Load video from YouTube ID
-        //ytPlayer.loadVideoID(lp.url)
-        
-        // Load video from YouTube URL
-        //let myVideoURL = NSURL(string: "https://www.youtube.com/watch?v=GNp6Xe5_tXU")
-        //ytPlayer.backgroundColor = .black
-        videoId = lp.url
-        ytPlayer.delegate = self
-        ytPlayer.loadVideo(videoId: videoId)
-        //ytPlayer.loadVideoURL(myVideoURL!)
+        //Настраиваем YouTubePlayer
+        let status = Reach().connectionStatus()
+        switch status {
+        case .unknown, .offline:
+            ytPlayer.isHidden = true
+            print("Not connected")
+        case .online(.wwan), .online(.wiFi):
+            ytPlayer.delegate = self
+            ytPlayer.loadVideo(videoId: videoId)
+            print("Connected via WiFi or WWAN")
+        }
     }
     
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
         //Если URL вида rg2://ytplay?time=2:12&link=0TvO_rpG_aM, то обрабатываем его тут, иначе открываем ссылку в браузере
         //let lp = ListPagerLab.shared.getPhaseItem(phase: phase, id: id)
         let stringUrl = URL.absoluteString
+        let internetStatus = Reach().connectionStatus()
+        
         if stringUrl.hasPrefix("rg2://ytplay?") {
-            // stringUrl like "rg2://ytplay?time=2:12&link=0TvO_rpG_aM"
-            let videoID = stringUrl.substringAfterLast(char: "=")
-            let time = stringUrl.substringAfter(char: "=").substringBefore(char: "&")
-            let minutes = time.substringBefore(char: ":")
-            let seconds = time.substringAfter(char: ":")
-            let timeInSec = "\(Int(60 * (Float(minutes) ?? 0) + (Float(seconds) ?? 0)))"
-            print ("VideID = \(videoID) min = \(minutes) sec = \(seconds) timeInSec = \(timeInSec)")
-            
-            if let keyWindow = UIApplication.shared.keyWindow {
-                let view = UIView(frame: keyWindow.frame)
-                view.backgroundColor = UIColor.black.withAlphaComponent(0.7)
-                //view.alpha = 0.7
-                view.tag = 101
-                view.isUserInteractionEnabled = true
+            switch internetStatus {
+            case .unknown, .offline:    //если оффлайн, то не ныводим плеер, выводим алерт
+                // создаем объект типа UIAlertController, описывающий модальное окно
+                let alertController = UIAlertController(
+                    title: "Нет сети",
+                    message: "Проверьте ваше интерент соединение",
+                    preferredStyle: .alert)
+                // создаем объекты типа UIAlertAction, описывающие кнопки
+                let alertButtonOne = UIAlertAction(title: "ОК", style: .default, handler: nil)
+                //let alertButtonTwo = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
+                // добавляем созданные кнопки в модальное окно
+                alertController.addAction(alertButtonOne)
+                //alertController.addAction(alertButtonTwo)
+                // выводим вспылывающее окно
+                self.present(alertController, animated: true, completion: nil)
                 
-                //Соотношение сторон видео 16/9
-                let height = (keyWindow.frame.width-20) * 9 / 16
-                let yAnchor = keyWindow.frame.height/2 - (height / 2)
-                let videoPlayerFrame = CGRect(x: 10, y: yAnchor, width: keyWindow.frame.width-20, height: height)
-//                let videoPlayerView = YouTubePlayerView(frame: videoPlayerFrame)
-                let videoPlayerView = YTPlayerView(frame: videoPlayerFrame)
-                videoPlayerView.delegate = self
-                videoPlayerView.loadVideo(videoId: videoID, startTime: timeInSec)
-                videoPlayerView.autoPlay = true
-                //let videoPlayerView = UIView(frame: videoPlayerFrame)
+            default:
+                // stringUrl like "rg2://ytplay?time=2:12&link=0TvO_rpG_aM"
+                let videoID = stringUrl.substringAfterLast(char: "=")
+                let time = stringUrl.substringAfter(char: "=").substringBefore(char: "&")
+                let minutes = time.substringBefore(char: ":")
+                let seconds = time.substringAfter(char: ":")
+                let timeInSec = "\(Int(60 * (Float(minutes) ?? 0) + (Float(seconds) ?? 0)))"
+                print ("VideID = \(videoID) min = \(minutes) sec = \(seconds) timeInSec = \(timeInSec)")
                 
-                //videoPlayerView.backgroundColor = .black
-//                videoPlayerView.
-                
-                view.addSubview (videoPlayerView)
-                //videoPlayerView.loadVideoID("l6V7517N_lQ")
-                //videoPlayerView.load(withVideoId: videoID)
-                //videoPlayerView.loadVideo(byId: videoID, startSeconds: 0, suggestedQuality: .auto )
-                self.view.addSubview(view)
-                
-                let aSelector : Selector = #selector(self.removeSubview)
-                let tapGesture = UITapGestureRecognizer(target:self, action: aSelector)
-                view.addGestureRecognizer(tapGesture)
+                if let keyWindow = UIApplication.shared.keyWindow {
+                    let view = UIView(frame: keyWindow.frame)
+                    view.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+                    //view.alpha = 0.7                      //можно добавить прозрачность и таким способом
+                    view.tag = 101                          //ставим тэг, чтобы потом удалить этот subView
+                    view.isUserInteractionEnabled = true
+                    
+                    //Соотношение сторон видео 16/9
+                    let height = (keyWindow.frame.width-20) * 9 / 16
+                    let yAnchor = keyWindow.frame.height/2 - (height / 2)
+                    let videoPlayerFrame = CGRect(x: 10, y: yAnchor, width: keyWindow.frame.width-20, height: height)
+                    //                let videoPlayerView = YouTubePlayerView(frame: videoPlayerFrame)
+                    let videoPlayerView = YTPlayerView(frame: videoPlayerFrame)
+                    videoPlayerView.delegate = self
+                    videoPlayerView.loadVideo(videoId: videoID, startTime: timeInSec)
+                    videoPlayerView.autoPlay = true
+                    //let videoPlayerView = UIView(frame: videoPlayerFrame)
+                    
+                    view.addSubview (videoPlayerView)
+                    //videoPlayerView.loadVideoID("l6V7517N_lQ")
+                    //videoPlayerView.load(withVideoId: videoID)
+                    //videoPlayerView.loadVideo(byId: videoID, startSeconds: 0, suggestedQuality: .auto )
+                    self.view.addSubview(view)
+                    
+                    let aSelector : Selector = #selector(self.removeSubview)
+                    let tapGesture = UITapGestureRecognizer(target:self, action: aSelector)
+                    view.addGestureRecognizer(tapGesture)
+                }
             }
-            
-            //            let testView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 568))
-            //            testView.backgroundColor = .blue
-            //            testView.alpha = 0.5
-            //            testView.tag = 100
-            //            testView.isUserInteractionEnabled = true
-            //            self.view.addSubview(testView)
-
-//            let aSelector : Selector = #selector(self.removeSubview)
-//            let tapGesture = UITapGestureRecognizer(target:self, action: aSelector)
-//            testView.addGestureRecognizer(tapGesture)
-           
-            
             // чтобы не открывать ссылку в браузере возвращаем false
             return false
         }
@@ -144,20 +146,21 @@ class ListPagerViewController: UIViewController, UITextViewDelegate {
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
+     
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destination.
      // Pass the selected object to the new view controller.
      }
      */
     
-
+    
     
     @objc func removeSubview(){
-        //print("Start remove sibview")
+        //print("Start remove subview")
         if let viewWithTag = self.view.viewWithTag(101) {
             viewWithTag.removeFromSuperview()
         }else{
-            print("No!")
+            print("No!")    //нет SubView с таким тэгом
         }
     }
     
@@ -165,13 +168,12 @@ class ListPagerViewController: UIViewController, UITextViewDelegate {
 
 
 extension YTPlayerView {
-    
     func loadVideo(videoId:String, startTime: String) {
         //https://developers.google.com/youtube/player_parameters
         let playerVars:[String: Any] = [
             "controls" : "1",       //0 – элементы управления не отображаются, 1-2 - отображаются
             "showinfo" : "1",       //начении 0 проигрыватель перед началом воспроизведения не выводит информацию о видео
-            "autoplay": "0",        //начинается ли воспроизведение исходного видео сразу после загрузки проигрывателя.
+            "autoplay": "0",        //воспроизведение исходного видео сразу после загрузки проигрывателя (не работает)
             "rel": "0",             //будут ли воспроизводиться похожие видео после завершения показа исходного видео.
             "modestbranding": "1",  //начение 1, чтобы логотип YouTube не отображался на панели управления
             "iv_load_policy" : "3", // 1 аннотации видео по умолчанию будут отображаться, а при значении 3 – будут скрыты.
@@ -190,38 +192,26 @@ extension YTPlayerView {
 }
 
 
-//WKYTPlayerViewDelegate
 extension ListPagerViewController: YTPlayerViewDelegate  {
     
-//    func playerViewDidBecomeReady(_ playerView: WKYTPlayerView) {
-//        ytPlayer.playVideo(at: 0)
-//    }
-
-//    func playerViewDidBecomeReady(_ playerView: WKYTPlayerView) {
-//        playerView.cueVideo(byId: self.videoId, startSeconds: 0, suggestedQuality: .highRes)
-//        playerView.playVideo()
-//    }
-    
-//    func playerViewPreferredWebViewBackgroundColor(_ playerView: WKYTPlayerView) -> UIColor {
-//        return .clear
-//    }
-//
     func playerViewDidBecomeReady(_ playerView: YTPlayerView){
         loadingMovieIndicator.stopAnimating()
-        if playerView.autoPlay {
-            playerView.playVideo()
-        }
-//        btnPlayPause.backgroundColor = #colorLiteral(red: 0.370555222, green: 0.3705646992, blue: 0.3705595732, alpha: 0.5104880137)
-//        btnPlayPause.setImage(UIImage(named:"play_icon"), for:.normal)
+        //т.к. autoplay не работает, запускаем play после загрузки видео вручную
+        if playerView.autoPlay { playerView.playVideo() }
     }
     
+    func playerView(_ playerView: YTPlayerView, receivedError error: YTPlayerError) {
+        print(error)
+    }
+    
+    //фон плеера без картинки и видео
     func playerViewPreferredWebViewBackgroundColor(_ playerView: YTPlayerView) -> UIColor{
-        return .clear
+        return .black
     }
     
+    //картинка до загрузки видео
     func playerViewPreferredInitialLoadingView(_ playerView: YTPlayerView) -> UIView?{
         return UIImageView(image:UIImage(named:"not_found"))
     }
-
     
 }
