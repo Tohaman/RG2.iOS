@@ -44,7 +44,7 @@ class ListPagerViewController: UIViewController, UITextViewDelegate {
         
         let htmlString = "<html><head>" +
             "<style>" +
-            "body {color: rgb(242, 173, 33); font-family: 'Arial'; text-decoration:none; font-size: 15px}" +
+            "body {color: rgb(255, 181, 60); font-family: 'AppleSDGothicNeo-Regular'; text-decoration:none; font-size: 16}" +
             "</style>" +
             "</head>" +
             "</body>" +
