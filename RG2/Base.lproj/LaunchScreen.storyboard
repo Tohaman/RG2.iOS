@@ -32,7 +32,7 @@
                         <constraints>
                             <constraint firstItem="OLO-Jt-z1U" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DR5-hv-7nG"/>
                             <constraint firstItem="TeJ-M8-tgv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="193" id="Ncs-pX-ri2"/>
-                            <constraint firstItem="OLO-Jt-z1U" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZwC-Sn-s13"/>
+                            <constraint firstItem="OLO-Jt-z1U" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="bottom" id="ZwC-Sn-s13"/>
                             <constraint firstItem="TeJ-M8-tgv" firstAttribute="centerX" secondItem="OLO-Jt-z1U" secondAttribute="centerX" id="cNL-5W-XY1"/>
                             <constraint firstItem="TeJ-M8-tgv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="123" id="jZ0-H0-sMf"/>
                             <constraint firstItem="OLO-Jt-z1U" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="nHl-tb-0nx"/>

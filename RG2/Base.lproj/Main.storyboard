@@ -85,7 +85,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Qog-hd-62f">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eP0-om-gEg">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
@@ -171,14 +171,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Qog-hd-62f" secondAttribute="bottom" id="8ca-ry-Ftd"/>
+                            <constraint firstAttribute="top" secondItem="Qog-hd-62f" secondAttribute="top" id="A70-sd-6hI"/>
                             <constraint firstItem="eP0-om-gEg" firstAttribute="bottom" secondItem="gKL-6n-bAz" secondAttribute="bottom" id="OwJ-98-qyM"/>
                             <constraint firstItem="eP0-om-gEg" firstAttribute="leading" secondItem="gKL-6n-bAz" secondAttribute="leading" id="PFX-PM-R9E"/>
                             <constraint firstItem="eP0-om-gEg" firstAttribute="trailing" secondItem="gKL-6n-bAz" secondAttribute="trailing" id="Tgo-g4-Kom"/>
                             <constraint firstItem="eP0-om-gEg" firstAttribute="top" secondItem="gKL-6n-bAz" secondAttribute="top" id="W2n-g2-n2H"/>
-                            <constraint firstItem="Qog-hd-62f" firstAttribute="bottom" secondItem="gKL-6n-bAz" secondAttribute="bottom" id="b6L-Y9-lxz"/>
-                            <constraint firstItem="Qog-hd-62f" firstAttribute="trailing" secondItem="gKL-6n-bAz" secondAttribute="trailing" id="e6r-wA-0XP"/>
-                            <constraint firstItem="Qog-hd-62f" firstAttribute="leading" secondItem="gKL-6n-bAz" secondAttribute="leading" id="lch-rT-CKv"/>
-                            <constraint firstItem="Qog-hd-62f" firstAttribute="top" secondItem="pgK-aP-BHQ" secondAttribute="top" constant="20" id="yV0-Y6-g28"/>
+                            <constraint firstItem="Qog-hd-62f" firstAttribute="leading" secondItem="gKL-6n-bAz" secondAttribute="leading" id="eNq-FS-Lnd"/>
+                            <constraint firstAttribute="trailing" secondItem="Qog-hd-62f" secondAttribute="trailing" id="f8u-Ul-gIe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gKL-6n-bAz"/>
                     </view>
@@ -198,7 +198,7 @@
         <!--List Pager View Controller-->
         <scene sceneID="mvR-ft-IvQ">
             <objects>
-                <pageViewController storyboardIdentifier="listPagerViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="mBb-7K-KUK" customClass="ListPagerViewController" customModule="RG2" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="listPagerViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="mBb-7K-KUK" customClass="ListPagerViewController" customModule="RG2" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pLt-Na-LBv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1631" y="134"/>

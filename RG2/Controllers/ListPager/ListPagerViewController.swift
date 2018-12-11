@@ -12,6 +12,7 @@ class ListPagerViewController: UIPageViewController {
     
     var phase = ""
     var id = 0
+    var lps : [ListPager] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,7 @@ class ListPagerViewController: UIPageViewController {
     func displayViewController (atIndex index: Int) -> PagerItemViewController? {
         //Проверяем старички пейджера, чтобы не перелистнуть куда не надо
         guard index >= 0 else { return nil }
-        let lps = ListPagerLab.shared.getPhaseList(phase: phase)
+        lps = ListPagerLab.shared.getPhaseList(phase: phase)
         guard index < lps.count else { return nil }
         
         guard let listPagerVC = storyboard?.instantiateViewController(withIdentifier: "pagerItemViewController") as? PagerItemViewController else {return nil}
@@ -41,16 +42,22 @@ class ListPagerViewController: UIPageViewController {
 
 extension ListPagerViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        var index = (viewController as! PagerItemViewController).id
-        index -= 1
-        return displayViewController(atIndex: index)
+        id = (viewController as! PagerItemViewController).id
+        id -= 1
+        return displayViewController(atIndex: id)
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        var index = (viewController as! PagerItemViewController).id
-        index += 1
-        return displayViewController(atIndex: index)
+        id = (viewController as! PagerItemViewController).id
+        id += 1
+        return displayViewController(atIndex: id)
     }
     
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+        return lps.count
+    }
     
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+        return id
+    }
 }
