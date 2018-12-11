@@ -17,7 +17,7 @@ class MainTableViewController: UITableViewController {
     //    let restaurantImages = ["ogonek.jpg", "elu.jpg", "bonsai.jpg", "dastarhan.jpg", "indokitay.jpg", "x.o.jpg", "balkan.jpg", "respublika.jpg", "speakeasy.jpg", "morris.jpg", "istorii.jpg", "klassik.jpg", "love.jpg", "shok.jpg", "bochka.jpg"]
     
     //var currentPhase = "MAIN3X3"
-    var currentPhase = "BEGIN3X3"
+    var currentPhase = "ROZOV3X3"
     var lps = ListPagerLab.shared.getPhaseList(phase: "MAIN3X3")
     
     override func viewDidLoad() {
@@ -38,7 +38,14 @@ class MainTableViewController: UITableViewController {
         print(userInfo ?? "Unknown")
     }
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //тут можно запустить обучалку по работе с программой
+//        if let helpPageViewController = storyboard?.instantiateViewController(withIdentifier: "helpPageViewController") as? HelpPageViewController {
+//            present (helpPageViewController, animated: true, completion: nil)
+//        }
+    }
     
     // MARK: - Table view data source
     

@@ -61,7 +61,7 @@
                                     <outlet property="titleComment" destination="k3R-xL-bKf" id="n2y-cn-Bco"/>
                                     <outlet property="titleImageView" destination="Abm-KA-6uz" id="rKq-qL-aPg"/>
                                     <outlet property="titleTextView" destination="k4a-6X-aFK" id="Muy-bX-hyt"/>
-                                    <segue destination="mE3-gM-EML" kind="show" identifier="listPagerSegue" id="Lxg-Yh-txU"/>
+                                    <segue destination="mBb-7K-KUK" kind="show" identifier="listPagerSegue" id="TeZ-Pm-2lR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -76,24 +76,24 @@
             </objects>
             <point key="canvasLocation" x="776.79999999999995" y="134.48275862068968"/>
         </scene>
-        <!--List Pager View Controller-->
+        <!--Pager Item View Controller-->
         <scene sceneID="KNg-JM-txs">
             <objects>
-                <viewController id="mE3-gM-EML" customClass="ListPagerViewController" customModule="RG2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="pagerItemViewController" id="mE3-gM-EML" customClass="PagerItemViewController" customModule="RG2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pgK-aP-BHQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Qog-hd-62f">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eP0-om-gEg">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rO0-rh-inq" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="354"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_begin" translatesAutoresizingMaskIntoConstraints="NO" id="YiN-uX-iCL">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="begin_1" translatesAutoresizingMaskIntoConstraints="NO" id="YiN-uX-iCL">
                                                 <rect key="frame" x="8" y="8" width="70" height="70"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="2Kb-FZ-m2l"/>
@@ -108,7 +108,7 @@
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="TextView" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Hz-De-PRp">
                                                 <rect key="frame" x="8" y="86" width="359" height="33"/>
-                                                <color key="tintColor" red="1" green="0.48381632579304013" blue="0.01194518120417376" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="1" green="0.39894501907973412" blue="0.038885730403109942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" red="1" green="0.71000161439999998" blue="0.23582626709999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -178,7 +178,7 @@
                             <constraint firstItem="Qog-hd-62f" firstAttribute="bottom" secondItem="gKL-6n-bAz" secondAttribute="bottom" id="b6L-Y9-lxz"/>
                             <constraint firstItem="Qog-hd-62f" firstAttribute="trailing" secondItem="gKL-6n-bAz" secondAttribute="trailing" id="e6r-wA-0XP"/>
                             <constraint firstItem="Qog-hd-62f" firstAttribute="leading" secondItem="gKL-6n-bAz" secondAttribute="leading" id="lch-rT-CKv"/>
-                            <constraint firstItem="Qog-hd-62f" firstAttribute="top" secondItem="pgK-aP-BHQ" secondAttribute="top" constant="64" id="yV0-Y6-g28"/>
+                            <constraint firstItem="Qog-hd-62f" firstAttribute="top" secondItem="pgK-aP-BHQ" secondAttribute="top" constant="20" id="yV0-Y6-g28"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gKL-6n-bAz"/>
                     </view>
@@ -193,7 +193,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hlH-zu-NnY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1501.5999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="2349.5999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--List Pager View Controller-->
+        <scene sceneID="mvR-ft-IvQ">
+            <objects>
+                <pageViewController storyboardIdentifier="listPagerViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="mBb-7K-KUK" customClass="ListPagerViewController" customModule="RG2" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pLt-Na-LBv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1631" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Sq8-fe-FGz">
@@ -219,7 +227,7 @@
     </scenes>
     <resources>
         <image name="Background" width="375" height="667"/>
-        <image name="ic_begin" width="70" height="70"/>
+        <image name="begin_1" width="100" height="100"/>
         <image name="main_1" width="70" height="70"/>
     </resources>
 </document>

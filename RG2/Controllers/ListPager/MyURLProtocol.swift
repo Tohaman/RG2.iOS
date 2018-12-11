@@ -27,8 +27,8 @@ class MyURLProtocol: URLProtocol, URLSessionDataDelegate, URLSessionTaskDelegate
     
     // MARK: URLProtocol
     override class func canInit(with request: URLRequest) -> Bool {
-        requestCount += 1
-        print("Request # \(requestCount) URL = \(request.url?.absoluteString ?? " ") \n")
+        //requestCount += 1
+        //print("Request # \(requestCount) URL = \(request.url?.absoluteString ?? " ") \n")
         //false - если не обрабатываем
         //true - если обрабатываем дальше (выполняется startLoading для этого request)
         
@@ -53,7 +53,7 @@ class MyURLProtocol: URLProtocol, URLSessionDataDelegate, URLSessionTaskDelegate
     }
     
     override func startLoading() {
-        print ("startLoading with request \(request.url!.absoluteString)")
+        //print ("startLoading with request \(request.url!.absoluteString)")
         if let imgName = request.url?.absoluteString.components(separatedBy: "/").last {
             var img = UIImage(named: imgName)
             if img == nil {img=UIImage(named: "no_image")}

@@ -24,6 +24,7 @@ class ListPagerLab {
     private init() {
         phaseInit(phasesStrings: MainMenu())
         phaseInit(phasesStrings: Begin3x3())
+        phaseInit(phasesStrings: Rozov3x3())
     }
     static let shared = ListPagerLab()
     

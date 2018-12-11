@@ -10,7 +10,7 @@ import UIKit
 //import YoutubePlayer_in_WKWebView
 import youtube_ios_player_helper_swift
 
-class ListPagerViewController: UIViewController, UITextViewDelegate {
+class PagerItemViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var titleImage: UIImageView!
     @IBOutlet weak var titleText: UILabel!
@@ -21,7 +21,6 @@ class ListPagerViewController: UIViewController, UITextViewDelegate {
     
     var phase = ""
     var id = 0
-    var videoId: String!
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
         return .portrait
@@ -40,16 +39,15 @@ class ListPagerViewController: UIViewController, UITextViewDelegate {
         let lp = ListPagerLab.shared.getPhaseItem(phase: phase, id: id)
         titleImage.image = lp.getImage()
         titleText.text = lp.title
-        videoId = lp.url
+        let videoId = lp.url
         
         let htmlString = "<html><head>" +
             "<style>" +
             "body {color: rgb(255, 181, 60); font-family: 'AppleSDGothicNeo-Regular'; text-decoration:none; font-size: 16}" +
             "</style>" +
-            "</head>" +
-            "</body>" +
+            "</head><body>" +
             "\(lp.description)" +
-        "</head></html>"
+            "</body></html>"
         
         let htmlData = NSString(string: htmlString).data(using: String.Encoding.unicode.rawValue)
         let options = [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html]
@@ -77,6 +75,8 @@ class ListPagerViewController: UIViewController, UITextViewDelegate {
         //let lp = ListPagerLab.shared.getPhaseItem(phase: phase, id: id)
         let stringUrl = URL.absoluteString
         let internetStatus = Reach().connectionStatus()
+        
+        //#warning не забыть сделать обработку ссылок вида<a href="rg2://pager?phase=ROZOV&item=5">в моей методике,</a>
         
         if stringUrl.hasPrefix("rg2://ytplay?") {
             switch internetStatus {
@@ -141,20 +141,6 @@ class ListPagerViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
-    
-    
     @objc func removeSubview(){
         //print("Start remove subview")
         if let viewWithTag = self.view.viewWithTag(101) {
@@ -183,6 +169,7 @@ extension YTPlayerView {
         ]
         _ = self.load(videoId: videoId, playerVars: playerVars)
         //Если ставим свои кнопки play/pause, то можно использовать вместе с "controls" : "0"
+        //но пока используем стандартные
         //ytPlayer.isUserInteractionEnabled = false
     }
     
@@ -192,7 +179,7 @@ extension YTPlayerView {
 }
 
 
-extension ListPagerViewController: YTPlayerViewDelegate  {
+extension PagerItemViewController: YTPlayerViewDelegate  {
     
     func playerViewDidBecomeReady(_ playerView: YTPlayerView){
         loadingMovieIndicator.stopAnimating()
