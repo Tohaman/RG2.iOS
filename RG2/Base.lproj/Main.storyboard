@@ -61,7 +61,6 @@
                                     <outlet property="titleComment" destination="k3R-xL-bKf" id="n2y-cn-Bco"/>
                                     <outlet property="titleImageView" destination="Abm-KA-6uz" id="rKq-qL-aPg"/>
                                     <outlet property="titleTextView" destination="k4a-6X-aFK" id="Muy-bX-hyt"/>
-                                    <segue destination="mBb-7K-KUK" kind="show" identifier="listPagerSegue" id="TeZ-Pm-2lR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

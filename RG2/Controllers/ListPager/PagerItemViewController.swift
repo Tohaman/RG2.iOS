@@ -58,16 +58,21 @@ class PagerItemViewController: UIViewController, UITextViewDelegate {
         descriptionText.delegate = self
         
         //Настраиваем YouTubePlayer
-        let status = Reach().connectionStatus()
-        switch status {
-        case .unknown, .offline:
+        if lp.url != "" {
+            let status = Reach().connectionStatus()
+            switch status {
+            case .unknown, .offline:
+                ytPlayer.isHidden = true
+                print("Not connected")
+            case .online(.wwan), .online(.wiFi):
+                ytPlayer.delegate = self
+                ytPlayer.loadVideo(videoId: videoId)
+                print("Connected via WiFi or WWAN")
+            }
+        } else {
             ytPlayer.isHidden = true
-            print("Not connected")
-        case .online(.wwan), .online(.wiFi):
-            ytPlayer.delegate = self
-            ytPlayer.loadVideo(videoId: videoId)
-            print("Connected via WiFi or WWAN")
         }
+        
     }
     
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {

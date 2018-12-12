@@ -23,6 +23,8 @@ class ListPagerLab {
     
     private init() {
         phaseInit(phasesStrings: MainMenu())
+        phaseInit(phasesStrings: G2F())
+        
         phaseInit(phasesStrings: Begin3x3())
         phaseInit(phasesStrings: Rozov3x3())
     }
@@ -50,6 +52,16 @@ class ListPagerLab {
         var lps : [ListPager] = []
         for item in listPagers {
             if item.phase == phase {
+                lps.append(item)
+            }
+        }
+        return lps
+    }
+    
+    func getPhaseList4LP (phase: String) -> [ListPager] {
+        var lps : [ListPager] = []
+        for item in listPagers {
+            if (item.phase == phase) && (item.url != "submenu") {
                 lps.append(item)
             }
         }

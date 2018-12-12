@@ -26,6 +26,8 @@
 		3A4B193821BF9A3500CB6F4D /* ListPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B193721BF9A3500CB6F4D /* ListPagerViewController.swift */; };
 		3A4B193D21BFB33800CB6F4D /* Rozov3x3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B193C21BFB33800CB6F4D /* Rozov3x3.swift */; };
 		3A4B193F21BFB66A00CB6F4D /* Blank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B193E21BFB66A00CB6F4D /* Blank.swift */; };
+		3A4E692D21C122040013EFA0 /* G2F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4E692C21C122040013EFA0 /* G2F.swift */; };
+		3A4E692F21C13B220013EFA0 /* Recomendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4E692E21C13B220013EFA0 /* Recomendation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -61,6 +63,8 @@
 		3A4B193721BF9A3500CB6F4D /* ListPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPagerViewController.swift; sourceTree = "<group>"; };
 		3A4B193C21BFB33800CB6F4D /* Rozov3x3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rozov3x3.swift; sourceTree = "<group>"; };
 		3A4B193E21BFB66A00CB6F4D /* Blank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blank.swift; sourceTree = "<group>"; };
+		3A4E692C21C122040013EFA0 /* G2F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G2F.swift; sourceTree = "<group>"; };
+		3A4E692E21C13B220013EFA0 /* Recomendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recomendation.swift; sourceTree = "<group>"; };
 		9823C93373549609456210EB /* Pods_RG2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RG2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7723AC2BA69F48D95FE7BA9 /* Pods-RG2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RG2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RG2/Pods-RG2.debug.xcconfig"; sourceTree = "<group>"; };
 		F57566168E6668C69C9AE973 /* Pods-RG2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RG2.release.xcconfig"; path = "Pods/Target Support Files/Pods-RG2/Pods-RG2.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,11 +120,11 @@
 		3A255BE221B1A1EB002FA07B /* RG2 */ = {
 			isa = PBXGroup;
 			children = (
-				3A255BFA21B1BD47002FA07B /* Res */,
 				3A279EC621B6B2BF00F55A3D /* YouTube */,
 				3A255BFF21B1BDB2002FA07B /* ListPagerLab */,
 				3A255BF521B1B9F0002FA07B /* Controllers */,
 				3A08AF8D21B7BB5700790759 /* Util */,
+				3A255BFA21B1BD47002FA07B /* Res */,
 				3A255BE721B1A1EB002FA07B /* Main.storyboard */,
 				3A255BEA21B1A1EB002FA07B /* Assets.xcassets */,
 				3A255BEC21B1A1EB002FA07B /* LaunchScreen.storyboard */,
@@ -144,7 +148,9 @@
 			children = (
 				3A255BFB21B1BD76002FA07B /* Begin3x3.swift */,
 				3A4B193C21BFB33800CB6F4D /* Rozov3x3.swift */,
+				3A4E692C21C122040013EFA0 /* G2F.swift */,
 				3A4B193E21BFB66A00CB6F4D /* Blank.swift */,
+				3A4E692E21C13B220013EFA0 /* Recomendation.swift */,
 				3A255BFD21B1BDA5002FA07B /* MainMenu.swift */,
 			);
 			path = Res;
@@ -207,6 +213,7 @@
 				3A255BDD21B1A1EB002FA07B /* Frameworks */,
 				3A255BDE21B1A1EB002FA07B /* Resources */,
 				A8C4198E66610A9EB8D20329 /* [CP] Embed Pods Frameworks */,
+				3A4E693021C14C0B0013EFA0 /* ShellScript */,
 			);
 			buildRules = (
 				3A0A0D1021B4F7E300E6707C /* PBXBuildRule */,
@@ -287,6 +294,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3A4E693021C14C0B0013EFA0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:|FIXME:\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"\n";
+		};
 		A8C4198E66610A9EB8D20329 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,6 +343,7 @@
 				3A255BFE21B1BDA5002FA07B /* MainMenu.swift in Sources */,
 				3A4B193821BF9A3500CB6F4D /* ListPagerViewController.swift in Sources */,
 				3A255BFC21B1BD76002FA07B /* Begin3x3.swift in Sources */,
+				3A4E692D21C122040013EFA0 /* G2F.swift in Sources */,
 				3A4B193F21BFB66A00CB6F4D /* Blank.swift in Sources */,
 				3A362AE021B2EF1E006FEF66 /* PagerItemViewController.swift in Sources */,
 				3A255C0321B1BDFA002FA07B /* ListPagerLab.swift in Sources */,
@@ -328,6 +353,7 @@
 				3A255BF721B1BA1E002FA07B /* MainTableViewController.swift in Sources */,
 				3A255BF921B1BA32002FA07B /* MainTableViewCell.swift in Sources */,
 				3A255BE421B1A1EB002FA07B /* AppDelegate.swift in Sources */,
+				3A4E692F21C13B220013EFA0 /* Recomendation.swift in Sources */,
 				3A04B4C221B8FEE9006642B6 /* Reach.swift in Sources */,
 				3A255C0121B1BDDC002FA07B /* ListPager.swift in Sources */,
 				3A4B193D21BFB33800CB6F4D /* Rozov3x3.swift in Sources */,

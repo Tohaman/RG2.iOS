@@ -17,7 +17,7 @@ class ListPagerViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = self
-        
+        lps = ListPagerLab.shared.getPhaseList4LP (phase: phase)
         if let initVC = displayViewController(atIndex: id) {
             setViewControllers([initVC], direction: .forward, animated: true, completion: nil)
         }
@@ -25,11 +25,11 @@ class ListPagerViewController: UIPageViewController {
 
     
     func displayViewController (atIndex index: Int) -> PagerItemViewController? {
-        //Проверяем старички пейджера, чтобы не перелистнуть куда не надо
+        //Проверяем странички пейджера, чтобы не перелистнуть куда не надо
         guard index >= 0 else { return nil }
-        lps = ListPagerLab.shared.getPhaseList(phase: phase)
         guard index < lps.count else { return nil }
         
+        //собственно, задаем параметры для PageItem и возвращаем страничку
         guard let listPagerVC = storyboard?.instantiateViewController(withIdentifier: "pagerItemViewController") as? PagerItemViewController else {return nil}
         listPagerVC.phase = phase
         listPagerVC.id = index

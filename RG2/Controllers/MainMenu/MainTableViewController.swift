@@ -10,15 +10,9 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
     
-    //    let mainMenuItem = ["Title 1", "Title 2", "Title 3"]
-    //
-    //    let restaurantNames = ["Ogonёk Grill&Bar", "Елу", "Bonsai", "Дастархан", "Индокитай", "X.O", "Балкан Гриль", "Respublica", "Speak Easy", "Morris Pub", "Вкусные истории", "Классик", "Love&Life", "Шок", "Бочка"]
-    //
-    //    let restaurantImages = ["ogonek.jpg", "elu.jpg", "bonsai.jpg", "dastarhan.jpg", "indokitay.jpg", "x.o.jpg", "balkan.jpg", "respublika.jpg", "speakeasy.jpg", "morris.jpg", "istorii.jpg", "klassik.jpg", "love.jpg", "shok.jpg", "bochka.jpg"]
-    
-    //var currentPhase = "MAIN3X3"
-    var currentPhase = "ROZOV3X3"
-    var lps = ListPagerLab.shared.getPhaseList(phase: "MAIN3X3")
+    var currentPhase = "MAIN3X3"
+    //var currentPhase = "ROZOV3X3"
+    var lps : [ListPager] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +23,7 @@ class MainTableViewController: UITableViewController {
         //стиль кнопочки "назад"
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
+        //проверям доступность интернета
         NotificationCenter.default.addObserver(self, selector: #selector(MainTableViewController.networkStatusChanged(_:)), name: NSNotification.Name(rawValue: ReachabilityStatusChangedNotification), object: nil)
         Reach().monitorReachabilityChanges()
     }
@@ -74,38 +69,34 @@ class MainTableViewController: UITableViewController {
         
         return cell
     }
+  
     
-    func showAlert (index: Int) {
-        let ac = UIAlertController(title: nil, message: "Выберите действие", preferredStyle: .actionSheet)
-        //let call = UIAlertAction(title: "Позвонить: \(index)", style: .default, handler: nil)
-        let call = UIAlertAction(title: "Позвонить: \(index)", style: .default) {
-            (action: UIAlertAction) -> Void in
-            let alertC = UIAlertController(title: nil, message: "Не могу позвонить", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertC.addAction(ok)
-            self.present(alertC, animated: true, completion: nil)
-        }
-        
-        
-        let cancel = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
-        
-        ac.addAction(cancel)
-        ac.addAction(call)
-        present (ac, animated: true, completion: nil)
-    }
-    
+    //обработка нажатия на ячейку в tableView
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //showAlert(index: indexPath.row)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "listPagerSegue" {
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let dvc = segue.destination as! ListPagerViewController
+        if let indexPath = tableView.indexPathForSelectedRow {
+            switch lps[indexPath.row].url {
+            case "submenu":
+                // TODO: Finish this code
+                print ("submenu")
+            default:
+                let dvc = storyboard?.instantiateViewController(withIdentifier: "listPagerViewController") as! ListPagerViewController
                 dvc.phase = lps[indexPath.row].phase
                 dvc.id = lps[indexPath.row].id
+                self.navigationController?.pushViewController(dvc, animated: true)
             }
         }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "listPagerSegue" {
+//            if let indexPath = tableView.indexPathForSelectedRow {
+//                let dvc = segue.destination as! ListPagerViewController
+//                dvc.phase = lps[indexPath.row].phase
+//                dvc.id = lps[indexPath.row].id
+//            }
+//        }
+//    }
+    
+
 }
