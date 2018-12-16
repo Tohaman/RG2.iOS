@@ -24,13 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = #colorLiteral(red: 0.1377080679, green: 0.2341583669, blue: 0.1350685358, alpha: 1)
         UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.9102509618, green: 0.5562421679, blue: 0.03188486397, alpha: 1)
         
-        if let barFont = UIFont (name: "AppleSDGothicNeo-Bold", size: 22) {
-            UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: barFont ]
-        }
+//        if let barFont = UIFont (name: "AppleSDGothicNeo-Bold", size: 22) {
+//            UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: barFont ]
+//        }
         
         return true
     }
 
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

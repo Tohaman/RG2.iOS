@@ -22,11 +22,13 @@ class ListPagerLab {
     var listPagers : [ListPager] = []
     
     private init() {
-        phaseInit(phasesStrings: MainMenu())
+        phaseInit(phasesStrings: Main3x3())
         phaseInit(phasesStrings: G2F())
         
         phaseInit(phasesStrings: Begin3x3())
         phaseInit(phasesStrings: Rozov3x3())
+        phaseInit(phasesStrings: Patterns())
+        phaseInit(phasesStrings: Blind())
     }
     static let shared = ListPagerLab()
     
@@ -48,6 +50,7 @@ class ListPagerLab {
         }
     }
 
+    //список ListPager для TableView (с сабменю)
     func getPhaseList (phase: String) -> [ListPager] {
         var lps : [ListPager] = []
         for item in listPagers {
@@ -58,7 +61,8 @@ class ListPagerLab {
         return lps
     }
     
-    func getPhaseList4LP (phase: String) -> [ListPager] {
+    //список ListPager для ListPagerView (без сабменю)
+    func getPhaseList4LPV (phase: String) -> [ListPager] {
         var lps : [ListPager] = []
         for item in listPagers {
             if (item.phase == phase) && (item.url != "submenu") {
@@ -68,6 +72,30 @@ class ListPagerLab {
         return lps
     }
     
+    //список фаз сабменю
+    func getSubmenu () -> [String] {
+        var stringArray : [String] = []
+        for item in listPagers {
+            if (item.url == "submenu") {
+                stringArray.append(item.description)
+            }
+        }
+        return stringArray
+    }
+    
+    //возвращает фазу родительского меню для заданной фазы или "" для главного меню
+    func getBackPhase (phase: String) -> String {
+        var backPhase = ""
+        for item in listPagers {
+            if (item.url == "submenu") && (item.description == phase) {
+                backPhase = item.phase
+            }
+        }
+        return backPhase
+    }
+
+   
+    //Возвращает из ListPager с заданной фазой и номерлм в фазе
     func getPhaseItem (phase: String, id: Int) -> ListPager {
         var lp = ListPager (phase: phase, id: id, title: "", image: "", description: "", url: "", comment: "")
         for item in listPagers {

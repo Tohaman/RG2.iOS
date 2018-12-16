@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MainMenu : Phases  {
+struct Main3x3 : Phases  {
     func phase() -> String {
         let phase = "MAIN3X3"
         return phase
@@ -54,8 +54,8 @@ struct MainMenu : Phases  {
     
     let description = [
         Recomend.st3_description,
-        "ROZOV",
-        "BEGIN",
+        "ROZOV3X3",
+        "BEGIN3X3",
         "G2F",
         "BLIND",
         "PATTERNS"

@@ -18,6 +18,8 @@ class PagerItemViewController: UIViewController, UITextViewDelegate {
     @IBOutlet var ytPlayer: YTPlayerView! //WKYTPlayerView!
     @IBOutlet weak var loadingMovieIndicator: UIActivityIndicatorView!
     @IBOutlet weak var playerStackView: UIStackView!
+    @IBOutlet weak var commentText: UILabel!
+    
     
     var phase = ""
     var id = 0
@@ -73,6 +75,7 @@ class PagerItemViewController: UIViewController, UITextViewDelegate {
             ytPlayer.isHidden = true
         }
         
+        commentText.text = lp.comment
     }
     
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
@@ -124,13 +127,17 @@ class PagerItemViewController: UIViewController, UITextViewDelegate {
                     let videoPlayerView = YTPlayerView(frame: videoPlayerFrame)
                     videoPlayerView.delegate = self
                     videoPlayerView.loadVideo(videoId: videoID, startTime: timeInSec)
+                    
+                    //TODO: Проверить качество видео
+                    
+                    //videoPlayerView.load(videoId: videoID, startSeconds: Float(timeInSec) ?? 0.0, suggestedQuality: .auto)
                     videoPlayerView.autoPlay = true
                     //let videoPlayerView = UIView(frame: videoPlayerFrame)
                     
                     view.addSubview (videoPlayerView)
                     //videoPlayerView.loadVideoID("l6V7517N_lQ")
                     //videoPlayerView.load(withVideoId: videoID)
-                    //videoPlayerView.loadVideo(byId: videoID, startSeconds: 0, suggestedQuality: .auto )
+                    //videoPlayerView.loadVideo(videoId:videoID, startTime: timeInSec)
                     self.view.addSubview(view)
                     
                     let aSelector : Selector = #selector(self.removeSubview)
@@ -173,6 +180,8 @@ extension YTPlayerView {
             "start" : startTime     //Начальное время в секундах
         ]
         _ = self.load(videoId: videoId, playerVars: playerVars)
+        _ = self.cue(videoId: videoId, startSeconds: Float(startTime) ?? 0.0, suggestedQuality: .auto)
+        
         //Если ставим свои кнопки play/pause, то можно использовать вместе с "controls" : "0"
         //но пока используем стандартные
         //ytPlayer.isUserInteractionEnabled = false
@@ -196,6 +205,7 @@ extension PagerItemViewController: YTPlayerViewDelegate  {
         print(error)
     }
     
+   
     //фон плеера без картинки и видео
     func playerViewPreferredWebViewBackgroundColor(_ playerView: YTPlayerView) -> UIColor{
         return .black
