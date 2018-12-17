@@ -25,6 +25,7 @@
 		3A25733421C6C2C4002E6EE9 /* Blind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25733321C6C2C4002E6EE9 /* Blind.swift */; };
 		3A25733621C6D551002E6EE9 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A25733521C6D551002E6EE9 /* UIImageExt.swift */; };
 		3A362AE021B2EF1E006FEF66 /* PagerItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A362ADF21B2EF1E006FEF66 /* PagerItemViewController.swift */; };
+		3A37F1AE21C81E4100A79C8F /* Accel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A37F1AD21C81E4100A79C8F /* Accel.swift */; };
 		3A4B193821BF9A3500CB6F4D /* ListPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B193721BF9A3500CB6F4D /* ListPagerViewController.swift */; };
 		3A4B193D21BFB33800CB6F4D /* Rozov3x3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B193C21BFB33800CB6F4D /* Rozov3x3.swift */; };
 		3A4B193F21BFB66A00CB6F4D /* Blank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B193E21BFB66A00CB6F4D /* Blank.swift */; };
@@ -65,6 +66,7 @@
 		3A25733321C6C2C4002E6EE9 /* Blind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blind.swift; sourceTree = "<group>"; };
 		3A25733521C6D551002E6EE9 /* UIImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		3A362ADF21B2EF1E006FEF66 /* PagerItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerItemViewController.swift; sourceTree = "<group>"; };
+		3A37F1AD21C81E4100A79C8F /* Accel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accel.swift; sourceTree = "<group>"; };
 		3A4B193721BF9A3500CB6F4D /* ListPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPagerViewController.swift; sourceTree = "<group>"; };
 		3A4B193C21BFB33800CB6F4D /* Rozov3x3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rozov3x3.swift; sourceTree = "<group>"; };
 		3A4B193E21BFB66A00CB6F4D /* Blank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blank.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				3A4E692C21C122040013EFA0 /* G2F.swift */,
 				3AAF1F2321C28F3900FC7632 /* Patterns.swift */,
 				3A4B193E21BFB66A00CB6F4D /* Blank.swift */,
+				3A37F1AD21C81E4100A79C8F /* Accel.swift */,
 				3A25733321C6C2C4002E6EE9 /* Blind.swift */,
 				3A4E692E21C13B220013EFA0 /* Recomendation.swift */,
 				3A255BFD21B1BDA5002FA07B /* MainMenu.swift */,
@@ -353,6 +356,7 @@
 				3A255C0321B1BDFA002FA07B /* ListPagerLab.swift in Sources */,
 				3A04B4C521B94809006642B6 /* MyURLProtocol.swift in Sources */,
 				3A08AF8F21B7BB7B00790759 /* StringExt.swift in Sources */,
+				3A37F1AE21C81E4100A79C8F /* Accel.swift in Sources */,
 				3A255BF721B1BA1E002FA07B /* MainTableViewController.swift in Sources */,
 				3A255BF921B1BA32002FA07B /* MainTableViewCell.swift in Sources */,
 				3A255BE421B1A1EB002FA07B /* AppDelegate.swift in Sources */,

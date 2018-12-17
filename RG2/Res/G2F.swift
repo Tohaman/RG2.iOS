@@ -46,14 +46,14 @@ struct G2F : Phases  {
     ]
 
     let image = [
-        "vbegin_0",
-        "vaccel_2",
-        "vcross",
-        "vf2l",
-        "vpll",
-        "voll_51",
-        "coll",
-        "roux_3"
+        "ic_faq",
+        "ic_accel",
+        "ic_cross",
+        "ic_f2l",
+        "ic_pll",
+        "ic_oll",
+        "ic_coll",
+        "ic_roux"
         ]
 
     let description = [

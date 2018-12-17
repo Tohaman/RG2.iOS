@@ -22,13 +22,16 @@ class ListPagerLab {
     var listPagers : [ListPager] = []
     
     private init() {
-        phaseInit(phasesStrings: Main3x3())
+        //Menu Item init
         phaseInit(phasesStrings: G2F())
+        phaseInit(phasesStrings: Main3x3())
         
+        //Phases init
+        phaseInit(phasesStrings: Accel())
         phaseInit(phasesStrings: Begin3x3())
-        phaseInit(phasesStrings: Rozov3x3())
-        phaseInit(phasesStrings: Patterns())
         phaseInit(phasesStrings: Blind())
+        phaseInit(phasesStrings: Patterns())
+        phaseInit(phasesStrings: Rozov3x3())
     }
     static let shared = ListPagerLab()
     
