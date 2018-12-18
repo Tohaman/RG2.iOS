@@ -69,7 +69,7 @@ struct G2F : Phases  {
 
 
     let url = [
-        "",
+        "submenu",
         "submenu",
         "submenu",
         "submenu",
