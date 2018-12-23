@@ -21,6 +21,18 @@ protocol Phases {
 class ListPagerLab {
     var listPagers : [ListPager] = []
     
+    var aaa = """
+    <p><a href="rg2://ytplay?time=1:39&link=u1CA_35lRAI">Для начала</a> несколько слов об устройстве кубика и тех частях из которых он состоит.</p>
+
+    <p>1. <a href="rg2://ytplay?time=1:46&link=u1CA_35lRAI">Центры.</a></p>
+    <p style="text-align:center"><img src="rozov_1_1.xml" width="20%%"></p>
+    
+    <p>Элементы кубика имеющие всего одну наклейку. Отличительная особенность - положение центров относительно друг друга четко фиксировано, т.к. внутри кубика они жестко соединены крестовиной.</p>
+
+    <p>2. <a href="rg2://ytplay?time=2:37&link=u1CA_35lRAI">Ребра.</a></p>
+    <p style="text-align:center"><img src="rozov_1_2.xml" width="20%%"></p>
+    """
+    
     private init() {
         //Menu Item init
         phaseInit(phasesStrings: G2F())
@@ -33,6 +45,9 @@ class ListPagerLab {
         phaseInit(phasesStrings: Patterns())
         phaseInit(phasesStrings: Recomend())
         phaseInit(phasesStrings: Rozov3x3())
+        
+        //BasicMoves init
+        phaseInit(phasesStrings: Basic3x3())
     }
     static let shared = ListPagerLab()
     
@@ -40,10 +55,35 @@ class ListPagerLab {
         let phase = phasesStrings.phase()
         let titles = phasesStrings.titles()
         let images = phasesStrings.images()
-        let descrs = phasesStrings.descs()
+        var descrs = phasesStrings.descs()
         let urls = phasesStrings.urls()
         var comments = phasesStrings.comments()
         let count = titles.count
+
+//        if let searchOptions = self.searchOptions, let regex = try? NSRegularExpression(options: searchOptions) {
+//            let range = NSRange(textView.text.startIndex..., in: textView.text)
+//            if let matches = regex?.matches(in: textView.text, options: [], range: range) {
+//                for match in matches {
+//                    let matchRange = match.range
+//                    attributedText.addAttribute(NSAttributedString.Key.backgroundColor, value: UIColor.yellow, range: matchRange)
+//                }
+//            }
+//        }
+        
+        for i in descrs.indices {
+            let myString = descrs[i]
+            let regex = try? NSRegularExpression(pattern: "width=\"\\d{2}%%\"", options: NSRegularExpression.Options.caseInsensitive)
+            //let regex = try? NSRegularExpression(pattern: "width=\"20%%\"", options: NSRegularExpression.Options.caseInsensitive)
+            let range = NSMakeRange(0, myString.count)
+            if let matches = regex?.matches(in: myString, options: [], range: range) {
+                for match in matches {
+                    let matchRange = Range(uncheckedBounds: (lower: (match.range.lowerBound + 7), upper: match.range.upperBound - 3))
+                    print (myString.substring(matchRange))
+                    //print (matchRange.upperBound)
+                }
+            }
+            //descrs[i]  = regex.stringByReplacingMatches(in: myString, options: [], range: range, withTemplate: "width= \"10%%\"")
+        }
         
         for i in 0...count - 1 {
             if comments.count == 0 {

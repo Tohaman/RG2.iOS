@@ -35,14 +35,15 @@ class MainTableViewController: UITableViewController {
         titleLabel.textColor = #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1)
         self.navigationItem.titleView = titleLabel
         
-        //Кнопка меню слева
-        // TODO: сделать кнопку
+        //Кнопка меню слева (гамбургер)
+        // TODO: сделать кнопку (гамбургер)
   
         //проверям доступность интернета
 //        NotificationCenter.default.addObserver(self, selector: #selector(MainTableViewController.networkStatusChanged(_:)), name: NSNotification.Name(rawValue: ReachabilityStatusChangedNotification), object: nil)
- //       Reach().monitorReachabilityChanges()
+        Reach().monitorReachabilityChanges()
     }
-    
+
+//выводим в лог состояние тырнета
 //    @objc func networkStatusChanged(_ notification: Notification) {
 //        let userInfo = (notification as NSNotification).userInfo
 //        print(userInfo ?? "Unknown")
@@ -90,7 +91,7 @@ class MainTableViewController: UITableViewController {
   
     
     //обработка нажатия на ячейку в tableView
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         if let indexPath = tableView.indexPathForSelectedRow {
             switch lps[indexPath.row].url {
             case "submenu":

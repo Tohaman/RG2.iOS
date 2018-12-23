@@ -42,6 +42,7 @@ class PagerItemViewController: UIViewController, UITextViewDelegate {
         titleImage.image = lp.getImage()
         titleText.text = lp.title
         let videoId = lp.url
+        let oneImage = "15"
         
         let htmlString = "<html><head>" +
             "<style>" +
@@ -74,17 +75,17 @@ class PagerItemViewController: UIViewController, UITextViewDelegate {
         } else {
             ytPlayer.isHidden = true
         }
-        
         commentText.text = lp.comment
     }
     
+    
+    //Обработка кликов на ссылки в тексте
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
         //Если URL вида rg2://ytplay?time=2:12&link=0TvO_rpG_aM, то обрабатываем его тут, иначе открываем ссылку в браузере
-        //let lp = ListPagerLab.shared.getPhaseItem(phase: phase, id: id)
         let stringUrl = URL.absoluteString
         let internetStatus = Reach().connectionStatus()
         
-        //#warning не забыть сделать обработку ссылок вида<a href="rg2://pager?phase=ROZOV&item=5">в моей методике,</a>
+        // TODO: не забыть сделать обработку ссылок вида<a href="rg2://pager?phase=ROZOV&item=5">в моей методике,</a>
         
         if stringUrl.hasPrefix("rg2://ytplay?") {
             switch internetStatus {
@@ -92,7 +93,7 @@ class PagerItemViewController: UIViewController, UITextViewDelegate {
                 // создаем объект типа UIAlertController, описывающий модальное окно
                 let alertController = UIAlertController(
                     title: "Нет сети",
-                    message: "Проверьте ваше интерент соединение",
+                    message: "Проверьте ваше интернет соединение",
                     preferredStyle: .alert)
                 // создаем объекты типа UIAlertAction, описывающие кнопки
                 let alertButtonOne = UIAlertAction(title: "ОК", style: .default, handler: nil)
@@ -110,19 +111,19 @@ class PagerItemViewController: UIViewController, UITextViewDelegate {
                 let minutes = time.substringBefore(char: ":")
                 let seconds = time.substringAfter(char: ":")
                 let timeInSec = "\(Int(60 * (Float(minutes) ?? 0) + (Float(seconds) ?? 0)))"
-                print ("VideID = \(videoID) min = \(minutes) sec = \(seconds) timeInSec = \(timeInSec)")
+//                print ("VideID = \(videoID) min = \(minutes) sec = \(seconds) timeInSec = \(timeInSec)")
                 
-                if let keyWindow = UIApplication.shared.keyWindow {
-                    let view = UIView(frame: keyWindow.frame)
+                if let shadowedWindow = UIApplication.shared.keyWindow {
+                    let view = UIView(frame: shadowedWindow.frame)
                     view.backgroundColor = UIColor.black.withAlphaComponent(0.7)
                     //view.alpha = 0.7                      //можно добавить прозрачность и таким способом
                     view.tag = 101                          //ставим тэг, чтобы потом удалить этот subView
                     view.isUserInteractionEnabled = true
                     
                     //Соотношение сторон видео 16/9
-                    let height = (keyWindow.frame.width-20) * 9 / 16
-                    let yAnchor = keyWindow.frame.height/2 - (height / 2)
-                    let videoPlayerFrame = CGRect(x: 10, y: yAnchor, width: keyWindow.frame.width-20, height: height)
+                    let height = (shadowedWindow.frame.width-20) * 9 / 16
+                    let yAnchor = shadowedWindow.frame.height/2 - (height / 2)
+                    let videoPlayerFrame = CGRect(x: 10, y: yAnchor, width: shadowedWindow.frame.width-20, height: height)
                     //                let videoPlayerView = YouTubePlayerView(frame: videoPlayerFrame)
                     let videoPlayerView = YTPlayerView(frame: videoPlayerFrame)
                     videoPlayerView.delegate = self
@@ -132,12 +133,8 @@ class PagerItemViewController: UIViewController, UITextViewDelegate {
                     
                     //videoPlayerView.load(videoId: videoID, startSeconds: Float(timeInSec) ?? 0.0, suggestedQuality: .auto)
                     videoPlayerView.autoPlay = true
-                    //let videoPlayerView = UIView(frame: videoPlayerFrame)
                     
                     view.addSubview (videoPlayerView)
-                    //videoPlayerView.loadVideoID("l6V7517N_lQ")
-                    //videoPlayerView.load(withVideoId: videoID)
-                    //videoPlayerView.loadVideo(videoId:videoID, startTime: timeInSec)
                     self.view.addSubview(view)
                     
                     let aSelector : Selector = #selector(self.removeSubview)

@@ -11,6 +11,7 @@
 		3A04B4C221B8FEE9006642B6 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A04B4C121B8FEE9006642B6 /* Reach.swift */; };
 		3A04B4C521B94809006642B6 /* MyURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A04B4C421B94809006642B6 /* MyURLProtocol.swift */; };
 		3A08AF8F21B7BB7B00790759 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A08AF8E21B7BB7B00790759 /* StringExt.swift */; };
+		3A1B71DF21CBF6F4002F8EE6 /* BasicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1B71DE21CBF6F4002F8EE6 /* BasicTableViewCell.swift */; };
 		3A255BE421B1A1EB002FA07B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A255BE321B1A1EB002FA07B /* AppDelegate.swift */; };
 		3A255BE921B1A1EB002FA07B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A255BE721B1A1EB002FA07B /* Main.storyboard */; };
 		3A255BEB21B1A1EB002FA07B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A255BEA21B1A1EB002FA07B /* Assets.xcassets */; };
@@ -31,6 +32,10 @@
 		3A4B193F21BFB66A00CB6F4D /* Blank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B193E21BFB66A00CB6F4D /* Blank.swift */; };
 		3A4E692D21C122040013EFA0 /* G2F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4E692C21C122040013EFA0 /* G2F.swift */; };
 		3A4E692F21C13B220013EFA0 /* Recomendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4E692E21C13B220013EFA0 /* Recomendation.swift */; };
+		3A6A02DB21CA5B26002D368E /* basic_3x3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A02DA21CA5B26002D368E /* basic_3x3.swift */; };
+		3A6A02E221CA654C002D368E /* BasicMovesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A02E121CA654C002D368E /* BasicMovesViewController.swift */; };
+		3A73E22B21CCD7F3004648F2 /* BasicMoves.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A73E22A21CCD7F3004648F2 /* BasicMoves.storyboard */; };
+		3A73E22F21CCE1FB004648F2 /* ListPager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A73E22E21CCE1FB004648F2 /* ListPager.storyboard */; };
 		3AAF1F2421C28F3900FC7632 /* Patterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF1F2321C28F3900FC7632 /* Patterns.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +55,7 @@
 		3A04B4C121B8FEE9006642B6 /* Reach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
 		3A04B4C421B94809006642B6 /* MyURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyURLProtocol.swift; sourceTree = "<group>"; };
 		3A08AF8E21B7BB7B00790759 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		3A1B71DE21CBF6F4002F8EE6 /* BasicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableViewCell.swift; sourceTree = "<group>"; };
 		3A255BE021B1A1EB002FA07B /* RG2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RG2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A255BE321B1A1EB002FA07B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A255BE821B1A1EB002FA07B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +78,10 @@
 		3A4B193E21BFB66A00CB6F4D /* Blank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blank.swift; sourceTree = "<group>"; };
 		3A4E692C21C122040013EFA0 /* G2F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G2F.swift; sourceTree = "<group>"; };
 		3A4E692E21C13B220013EFA0 /* Recomendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recomendation.swift; sourceTree = "<group>"; };
+		3A6A02DA21CA5B26002D368E /* basic_3x3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basic_3x3.swift; sourceTree = "<group>"; };
+		3A6A02E121CA654C002D368E /* BasicMovesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMovesViewController.swift; sourceTree = "<group>"; };
+		3A73E22A21CCD7F3004648F2 /* BasicMoves.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BasicMoves.storyboard; sourceTree = "<group>"; };
+		3A73E22E21CCE1FB004648F2 /* ListPager.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListPager.storyboard; sourceTree = "<group>"; };
 		3AAF1F2321C28F3900FC7632 /* Patterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patterns.swift; sourceTree = "<group>"; };
 		9823C93373549609456210EB /* Pods_RG2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RG2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7723AC2BA69F48D95FE7BA9 /* Pods-RG2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RG2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RG2/Pods-RG2.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,7 +144,6 @@
 				3A255BF521B1B9F0002FA07B /* Controllers */,
 				3A08AF8D21B7BB5700790759 /* Util */,
 				3A255BFA21B1BD47002FA07B /* Res */,
-				3A255BE721B1A1EB002FA07B /* Main.storyboard */,
 				3A255BEA21B1A1EB002FA07B /* Assets.xcassets */,
 				3A255BEC21B1A1EB002FA07B /* LaunchScreen.storyboard */,
 				3A255BE321B1A1EB002FA07B /* AppDelegate.swift */,
@@ -146,6 +155,7 @@
 		3A255BF521B1B9F0002FA07B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3A6A02DC21CA642E002D368E /* BasicMoves */,
 				3A4B193B21BF9AAB00CB6F4D /* MainMenu */,
 				3A4B193A21BF9A8600CB6F4D /* ListPager */,
 			);
@@ -155,15 +165,9 @@
 		3A255BFA21B1BD47002FA07B /* Res */ = {
 			isa = PBXGroup;
 			children = (
-				3A255BFB21B1BD76002FA07B /* Begin3x3.swift */,
-				3A4B193C21BFB33800CB6F4D /* Rozov3x3.swift */,
-				3A4E692C21C122040013EFA0 /* G2F.swift */,
-				3AAF1F2321C28F3900FC7632 /* Patterns.swift */,
+				3A6A02D921CA59EB002D368E /* BasicMoves */,
+				3A6A02D721CA593E002D368E /* 3x3 main menu */,
 				3A4B193E21BFB66A00CB6F4D /* Blank.swift */,
-				3A37F1AD21C81E4100A79C8F /* Accel.swift */,
-				3A25733321C6C2C4002E6EE9 /* Blind.swift */,
-				3A4E692E21C13B220013EFA0 /* Recomendation.swift */,
-				3A255BFD21B1BDA5002FA07B /* MainMenu.swift */,
 			);
 			path = Res;
 			sourceTree = "<group>";
@@ -180,6 +184,7 @@
 		3A4B193A21BF9A8600CB6F4D /* ListPager */ = {
 			isa = PBXGroup;
 			children = (
+				3A73E22E21CCE1FB004648F2 /* ListPager.storyboard */,
 				3A4B193721BF9A3500CB6F4D /* ListPagerViewController.swift */,
 				3A362ADF21B2EF1E006FEF66 /* PagerItemViewController.swift */,
 				3A04B4C421B94809006642B6 /* MyURLProtocol.swift */,
@@ -190,10 +195,52 @@
 		3A4B193B21BF9AAB00CB6F4D /* MainMenu */ = {
 			isa = PBXGroup;
 			children = (
+				3A255BE721B1A1EB002FA07B /* Main.storyboard */,
 				3A255BF621B1BA1E002FA07B /* MainTableViewController.swift */,
 				3A255BF821B1BA32002FA07B /* MainTableViewCell.swift */,
 			);
 			path = MainMenu;
+			sourceTree = "<group>";
+		};
+		3A6A02D721CA593E002D368E /* 3x3 main menu */ = {
+			isa = PBXGroup;
+			children = (
+				3A255BFD21B1BDA5002FA07B /* MainMenu.swift */,
+				3A4B193C21BFB33800CB6F4D /* Rozov3x3.swift */,
+				3A255BFB21B1BD76002FA07B /* Begin3x3.swift */,
+				3A6A02D821CA5965002D368E /* G2Fridrich */,
+				3A25733321C6C2C4002E6EE9 /* Blind.swift */,
+				3AAF1F2321C28F3900FC7632 /* Patterns.swift */,
+			);
+			path = "3x3 main menu";
+			sourceTree = "<group>";
+		};
+		3A6A02D821CA5965002D368E /* G2Fridrich */ = {
+			isa = PBXGroup;
+			children = (
+				3A4E692C21C122040013EFA0 /* G2F.swift */,
+				3A4E692E21C13B220013EFA0 /* Recomendation.swift */,
+				3A37F1AD21C81E4100A79C8F /* Accel.swift */,
+			);
+			path = G2Fridrich;
+			sourceTree = "<group>";
+		};
+		3A6A02D921CA59EB002D368E /* BasicMoves */ = {
+			isa = PBXGroup;
+			children = (
+				3A6A02DA21CA5B26002D368E /* basic_3x3.swift */,
+			);
+			path = BasicMoves;
+			sourceTree = "<group>";
+		};
+		3A6A02DC21CA642E002D368E /* BasicMoves */ = {
+			isa = PBXGroup;
+			children = (
+				3A73E22A21CCD7F3004648F2 /* BasicMoves.storyboard */,
+				3A6A02E121CA654C002D368E /* BasicMovesViewController.swift */,
+				3A1B71DE21CBF6F4002F8EE6 /* BasicTableViewCell.swift */,
+			);
+			path = BasicMoves;
 			sourceTree = "<group>";
 		};
 		C352B84C44B1657EF7EBFF8F /* Pods */ = {
@@ -267,6 +314,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A73E22B21CCD7F3004648F2 /* BasicMoves.storyboard in Resources */,
+				3A73E22F21CCE1FB004648F2 /* ListPager.storyboard in Resources */,
 				3A255BEE21B1A1EB002FA07B /* LaunchScreen.storyboard in Resources */,
 				3A255BEB21B1A1EB002FA07B /* Assets.xcassets in Resources */,
 				3A255BE921B1A1EB002FA07B /* Main.storyboard in Resources */,
@@ -355,9 +404,12 @@
 				3A25733621C6D551002E6EE9 /* UIImageExt.swift in Sources */,
 				3A4B193F21BFB66A00CB6F4D /* Blank.swift in Sources */,
 				3A362AE021B2EF1E006FEF66 /* PagerItemViewController.swift in Sources */,
+				3A1B71DF21CBF6F4002F8EE6 /* BasicTableViewCell.swift in Sources */,
 				3A255C0321B1BDFA002FA07B /* ListPagerLab.swift in Sources */,
 				3A04B4C521B94809006642B6 /* MyURLProtocol.swift in Sources */,
 				3A08AF8F21B7BB7B00790759 /* StringExt.swift in Sources */,
+				3A6A02DB21CA5B26002D368E /* basic_3x3.swift in Sources */,
+				3A6A02E221CA654C002D368E /* BasicMovesViewController.swift in Sources */,
 				3A37F1AE21C81E4100A79C8F /* Accel.swift in Sources */,
 				3A255BF721B1BA1E002FA07B /* MainTableViewController.swift in Sources */,
 				3A255BF921B1BA32002FA07B /* MainTableViewCell.swift in Sources */,

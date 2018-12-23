@@ -8,17 +8,23 @@
 
 import UIKit
 
-class ListPagerViewController: UIPageViewController {
+class ListPagerViewController: UIPageViewController, UITableViewDelegate, UITableViewDataSource {
+
     
     var navTitle = ""
     var phase = ""
     var id = 0
     var lps : [ListPager] = []
+    var basicLP : [ListPager] = []
+    let tag = 102
+//    let cellClass: AnyClass = BasicTableViewCell.self
+//    var cellIdentifier: String { return String(describing: cellClass) }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = self
         lps = ListPagerLab.shared.getPhaseList4LPV (phase: phase)
+        basicLP = ListPagerLab.shared.getPhaseList(phase: "BASIC3X3")
         if let initVC = displayViewController(atIndex: id) {
             setViewControllers([initVC], direction: .forward, animated: true, completion: nil)
         }
@@ -57,6 +63,60 @@ class ListPagerViewController: UIPageViewController {
     
     @objc func tapHelpButton() {
         print ("HelpButton pressed")
+        let dvc = storyboard?.instantiateViewController(withIdentifier: "basicMovesViewController") as! BasicMovesViewController
+        self.navigationController?.pushViewController(dvc, animated: true)
+        //present (dvc, animated: true, completion: nil)
+        
+//        if let shadowedWindow = UIApplication.shared.keyWindow {
+//            let view = UIView(frame: shadowedWindow.frame)
+//            self.navigationController?.setNavigationBarHidden(true, animated: false)
+//            view.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+//            //view.alpha = 0.7                      //можно добавить прозрачность и таким способом
+//            view.tag = tag                          //ставим тэг, чтобы потом удалить этот subView
+//            view.isUserInteractionEnabled = true
+//            self.view.addSubview(view)
+//
+//            let height = shadowedWindow.frame.height - 80
+//            let width = shadowedWindow.frame.width - 100
+//            let tableViewFrame = CGRect(x: 50, y: 40, width: width, height: height)
+//            let tableView = UITableView(frame: tableViewFrame)
+//            tableView.register(BasicTableViewCell.self, forCellReuseIdentifier: "BMCell")
+//            tableView.rowHeight = 80
+//            tableView.backgroundColor = UIColor.clear
+//            tableView.dataSource = self
+//            tableView.delegate = self
+//            view.addSubview (tableView)
+//
+//            let aSelector : Selector = #selector(self.removeSubview)
+//            let tapGesture = UITapGestureRecognizer(target:self, action: aSelector)
+//            view.addGestureRecognizer(tapGesture)
+//        }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return basicLP.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BMCell", for: indexPath) as! BasicTableViewCell
+        cell.basicTitle?.text = basicLP[indexPath.row].title
+        cell.basicImage?.image = basicLP[indexPath.row].getImage()
+        return cell
+    }
+    
+    
+    @objc func removeSubview(){
+        //print("Start remove subview")
+        if let viewWithTag = self.view.viewWithTag(tag) {
+            viewWithTag.removeFromSuperview()
+            self.navigationController?.setNavigationBarHidden(false, animated: true)
+        }else{
+            print("Can't find subview!")    //нет SubView с таким тэгом
+        }
     }
 }
 
