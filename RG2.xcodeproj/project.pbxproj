@@ -32,6 +32,9 @@
 		3A4B193F21BFB66A00CB6F4D /* Blank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B193E21BFB66A00CB6F4D /* Blank.swift */; };
 		3A4E692D21C122040013EFA0 /* G2F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4E692C21C122040013EFA0 /* G2F.swift */; };
 		3A4E692F21C13B220013EFA0 /* Recomendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4E692E21C13B220013EFA0 /* Recomendation.swift */; };
+		3A52C2C421D39BE600DF5E1D /* Pll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A52C2C321D39BE600DF5E1D /* Pll.swift */; };
+		3A66393721D2145100D452D0 /* Cross.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A66393621D2145100D452D0 /* Cross.swift */; };
+		3A66393921D26C9100D452D0 /* IntF2L.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A66393821D26C9100D452D0 /* IntF2L.swift */; };
 		3A6A02DB21CA5B26002D368E /* basic_3x3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A02DA21CA5B26002D368E /* basic_3x3.swift */; };
 		3A6A02E221CA654C002D368E /* BasicMovesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A02E121CA654C002D368E /* BasicMovesViewController.swift */; };
 		3A73E22B21CCD7F3004648F2 /* BasicMoves.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A73E22A21CCD7F3004648F2 /* BasicMoves.storyboard */; };
@@ -78,6 +81,9 @@
 		3A4B193E21BFB66A00CB6F4D /* Blank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blank.swift; sourceTree = "<group>"; };
 		3A4E692C21C122040013EFA0 /* G2F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G2F.swift; sourceTree = "<group>"; };
 		3A4E692E21C13B220013EFA0 /* Recomendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recomendation.swift; sourceTree = "<group>"; };
+		3A52C2C321D39BE600DF5E1D /* Pll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pll.swift; sourceTree = "<group>"; };
+		3A66393621D2145100D452D0 /* Cross.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cross.swift; sourceTree = "<group>"; };
+		3A66393821D26C9100D452D0 /* IntF2L.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntF2L.swift; sourceTree = "<group>"; };
 		3A6A02DA21CA5B26002D368E /* basic_3x3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basic_3x3.swift; sourceTree = "<group>"; };
 		3A6A02E121CA654C002D368E /* BasicMovesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMovesViewController.swift; sourceTree = "<group>"; };
 		3A73E22A21CCD7F3004648F2 /* BasicMoves.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BasicMoves.storyboard; sourceTree = "<group>"; };
@@ -220,7 +226,10 @@
 			children = (
 				3A4E692C21C122040013EFA0 /* G2F.swift */,
 				3A4E692E21C13B220013EFA0 /* Recomendation.swift */,
+				3A66393821D26C9100D452D0 /* IntF2L.swift */,
 				3A37F1AD21C81E4100A79C8F /* Accel.swift */,
+				3A66393621D2145100D452D0 /* Cross.swift */,
+				3A52C2C321D39BE600DF5E1D /* Pll.swift */,
 			);
 			path = G2Fridrich;
 			sourceTree = "<group>";
@@ -397,15 +406,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A255BFE21B1BDA5002FA07B /* MainMenu.swift in Sources */,
+				3A66393721D2145100D452D0 /* Cross.swift in Sources */,
 				3A4B193821BF9A3500CB6F4D /* ListPagerViewController.swift in Sources */,
 				3A25733221C6A6E6002E6EE9 /* LabelExt.swift in Sources */,
 				3A255BFC21B1BD76002FA07B /* Begin3x3.swift in Sources */,
 				3A4E692D21C122040013EFA0 /* G2F.swift in Sources */,
+				3A66393921D26C9100D452D0 /* IntF2L.swift in Sources */,
 				3A25733621C6D551002E6EE9 /* UIImageExt.swift in Sources */,
 				3A4B193F21BFB66A00CB6F4D /* Blank.swift in Sources */,
 				3A362AE021B2EF1E006FEF66 /* PagerItemViewController.swift in Sources */,
 				3A1B71DF21CBF6F4002F8EE6 /* BasicTableViewCell.swift in Sources */,
 				3A255C0321B1BDFA002FA07B /* ListPagerLab.swift in Sources */,
+				3A52C2C421D39BE600DF5E1D /* Pll.swift in Sources */,
 				3A04B4C521B94809006642B6 /* MyURLProtocol.swift in Sources */,
 				3A08AF8F21B7BB7B00790759 /* StringExt.swift in Sources */,
 				3A6A02DB21CA5B26002D368E /* basic_3x3.swift in Sources */,

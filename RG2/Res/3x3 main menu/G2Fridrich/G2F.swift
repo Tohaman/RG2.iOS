@@ -61,7 +61,7 @@ struct G2F : Phases  {
         "RECOMEND",
         "ACCEL",
         "CROSS",
-        "MAIN_F2L",
+        "INT_F2L",
         "PLL",
         "OLL",
         "COLL",

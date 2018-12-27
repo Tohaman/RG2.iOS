@@ -51,7 +51,7 @@ class MainTableViewController: UITableViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        // TODO Сделать загрузку/сохранение параметров используя UserDefaults.standart
+        // TODO: Сделать загрузку/сохранение параметров используя UserDefaults.standart
         //let userDefaults = UserDefaults.standart
         
         
@@ -84,7 +84,6 @@ class MainTableViewController: UITableViewController {
         let imageName = lps[indexPath.row].image
         cell.titleImageView.image = UIImage(named: imageName)
         cell.titleComment.text = lps[indexPath.row].comment
-        //cell.titleComment.text = "тут какой-то комментарий"
         
         return cell
     }
@@ -95,18 +94,27 @@ class MainTableViewController: UITableViewController {
         if let indexPath = tableView.indexPathForSelectedRow {
             switch lps[indexPath.row].url {
             case "submenu":
-//                currentPhase = lps[indexPath.row].description
-//                lps = ListPagerLab.shared.getPhaseList(phase: currentPhase)
-//                tableView.reloadData()
                 let dvc = storyboard?.instantiateViewController(withIdentifier: "tableViewController") as! MainTableViewController
                 dvc.currentPhase = lps[indexPath.row].description
                 dvc.currentTitle = lps[indexPath.row].title
                 self.navigationController?.pushViewController(dvc, animated: true)
-                
             default:
                 let dvc = storyboard?.instantiateViewController(withIdentifier: "listPagerViewController") as! ListPagerViewController
-                dvc.phase = lps[indexPath.row].phase
-                dvc.id = lps[indexPath.row].id
+                
+                let i = indexPath.row
+                let phase = lps[i].phase
+                var id = lps[i].id
+                let lps4id = ListPagerLab.shared.getPhaseList4LPV(phase: phase)
+                //отсеиваем элементы сабменю для листпейджера
+                if lps4id.count < i || lps[i].title != lps4id[i].title {
+                    for j in lps4id.indices {
+                        if lps[i].title == lps4id[j].title {
+                            id = j
+                        }
+                    }
+                }
+                dvc.phase = phase
+                dvc.id = id
                 dvc.navTitle = currentTitle
                 self.navigationController?.pushViewController(dvc, animated: true)
             }

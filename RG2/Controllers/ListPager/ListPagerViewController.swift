@@ -24,6 +24,8 @@ class ListPagerViewController: UIPageViewController, UITableViewDelegate, UITabl
         super.viewDidLoad()
         dataSource = self
         lps = ListPagerLab.shared.getPhaseList4LPV (phase: phase)
+        
+        //переменная для основных движений basicMoves, нужна при обработке нажатия на Знак вопроса
         basicLP = ListPagerLab.shared.getPhaseList(phase: "BASIC3X3")
         if let initVC = displayViewController(atIndex: id) {
             setViewControllers([initVC], direction: .forward, animated: true, completion: nil)
@@ -40,7 +42,7 @@ class ListPagerViewController: UIPageViewController, UITableViewDelegate, UITabl
         //собственно, задаем параметры для PageItem и возвращаем страничку
         guard let listPagerVC = storyboard?.instantiateViewController(withIdentifier: "pagerItemViewController") as? PagerItemViewController else {return nil}
         listPagerVC.phase = phase
-        listPagerVC.id = index
+        listPagerVC.id = lps[index].id
         
         return listPagerVC
     }
@@ -93,6 +95,16 @@ class ListPagerViewController: UIPageViewController, UITableViewDelegate, UITabl
 //        }
     }
     
+//    @objc func removeSubview(){
+//        //print("Start remove subview")
+//        if let viewWithTag = self.view.viewWithTag(tag) {
+//            viewWithTag.removeFromSuperview()
+//            self.navigationController?.setNavigationBarHidden(false, animated: true)
+//        }else{
+//            print("Can't find subview!")    //нет SubView с таким тэгом
+//        }
+//    }
+    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundColor = #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1)
     }
@@ -107,17 +119,7 @@ class ListPagerViewController: UIPageViewController, UITableViewDelegate, UITabl
         cell.basicImage?.image = basicLP[indexPath.row].getImage()
         return cell
     }
-    
-    
-    @objc func removeSubview(){
-        //print("Start remove subview")
-        if let viewWithTag = self.view.viewWithTag(tag) {
-            viewWithTag.removeFromSuperview()
-            self.navigationController?.setNavigationBarHidden(false, animated: true)
-        }else{
-            print("Can't find subview!")    //нет SubView с таким тэгом
-        }
-    }
+
 }
 
 extension ListPagerViewController: UIPageViewControllerDataSource {

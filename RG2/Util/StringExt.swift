@@ -99,4 +99,9 @@ extension String {
     }
 
     
+    
+    func replace(_ originalString:String, with newString:String) -> String {
+        return self.replacingOccurrences(of: originalString, with: newString)
+    }
+    
 }

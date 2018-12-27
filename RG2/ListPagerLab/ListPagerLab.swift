@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol Phases {
     func phase () -> String
@@ -20,20 +21,13 @@ protocol Phases {
 
 class ListPagerLab {
     var listPagers : [ListPager] = []
-    
-    var aaa = """
-    <p><a href="rg2://ytplay?time=1:39&link=u1CA_35lRAI">Для начала</a> несколько слов об устройстве кубика и тех частях из которых он состоит.</p>
-
-    <p>1. <a href="rg2://ytplay?time=1:46&link=u1CA_35lRAI">Центры.</a></p>
-    <p style="text-align:center"><img src="rozov_1_1.xml" width="20%%"></p>
-    
-    <p>Элементы кубика имеющие всего одну наклейку. Отличительная особенность - положение центров относительно друг друга четко фиксировано, т.к. внутри кубика они жестко соединены крестовиной.</p>
-
-    <p>2. <a href="rg2://ytplay?time=2:37&link=u1CA_35lRAI">Ребра.</a></p>
-    <p style="text-align:center"><img src="rozov_1_2.xml" width="20%%"></p>
-    """
+    let screenWidth = UIScreen.main.bounds.width
+    var multiplier = 1.0
     
     private init() {
+        //414 - ширина экрана iPhone XS, его принимаем за единицу
+        multiplier = Double(screenWidth / 414)
+        
         //Menu Item init
         phaseInit(phasesStrings: G2F())
         phaseInit(phasesStrings: Main3x3())
@@ -42,7 +36,10 @@ class ListPagerLab {
         phaseInit(phasesStrings: Accel())
         phaseInit(phasesStrings: Begin3x3())
         phaseInit(phasesStrings: Blind())
+        phaseInit(phasesStrings: Cross())
+        phaseInit(phasesStrings: IntF2L())
         phaseInit(phasesStrings: Patterns())
+        phaseInit(phasesStrings: Pll())
         phaseInit(phasesStrings: Recomend())
         phaseInit(phasesStrings: Rozov3x3())
         
@@ -59,30 +56,29 @@ class ListPagerLab {
         let urls = phasesStrings.urls()
         var comments = phasesStrings.comments()
         let count = titles.count
-
-//        if let searchOptions = self.searchOptions, let regex = try? NSRegularExpression(options: searchOptions) {
-//            let range = NSRange(textView.text.startIndex..., in: textView.text)
-//            if let matches = regex?.matches(in: textView.text, options: [], range: range) {
-//                for match in matches {
-//                    let matchRange = match.range
-//                    attributedText.addAttribute(NSAttributedString.Key.backgroundColor, value: UIColor.yellow, range: matchRange)
-//                }
-//            }
-//        }
         
+        //заменяем ширину в тегах, в зависимости от ширины экрана устройства
         for i in descrs.indices {
             let myString = descrs[i]
             let regex = try? NSRegularExpression(pattern: "width=\"\\d{2}%%\"", options: NSRegularExpression.Options.caseInsensitive)
-            //let regex = try? NSRegularExpression(pattern: "width=\"20%%\"", options: NSRegularExpression.Options.caseInsensitive)
             let range = NSMakeRange(0, myString.count)
             if let matches = regex?.matches(in: myString, options: [], range: range) {
+                var percent = 0
+                var txt = myString
                 for match in matches {
-                    let matchRange = Range(uncheckedBounds: (lower: (match.range.lowerBound + 7), upper: match.range.upperBound - 3))
-                    print (myString.substring(matchRange))
-                    //print (matchRange.upperBound)
+                    let fromIndex = match.range.lowerBound + 7
+                    let toIndex = match.range.upperBound - 3
+                    let matchRange = Range(uncheckedBounds: (lower: fromIndex, upper: toIndex))
+                    let matchString = myString.substring(matchRange)
+                    percent = Int(Double(matchString)! * multiplier)
+                    var percentString = String(percent)
+                    if percentString.length == 1 { percentString = "0" + percentString}
+                    let start = txt.index(myString.startIndex, offsetBy: fromIndex);
+                    let end = txt.index(myString.startIndex, offsetBy: toIndex);
+                    txt.replaceSubrange(start..<end, with: percentString)
                 }
+                descrs[i] = txt
             }
-            //descrs[i]  = regex.stringByReplacingMatches(in: myString, options: [], range: range, withTemplate: "width= \"10%%\"")
         }
         
         for i in 0...count - 1 {
