@@ -42,8 +42,7 @@ class PagerItemViewController: UIViewController, UITextViewDelegate {
         titleImage.image = lp.getImage()
         titleText.text = lp.title
         let videoId = lp.url
-        let oneImage = "15"
-        
+ 
         let htmlString = "<html><head>" +
             "<style>" +
             "body {color: rgb(255, 181, 60); font-family: 'AppleSDGothicNeo-Regular'; text-decoration:none; font-size: 16}" +
@@ -127,6 +126,7 @@ class PagerItemViewController: UIViewController, UITextViewDelegate {
                     //                let videoPlayerView = YouTubePlayerView(frame: videoPlayerFrame)
                     let videoPlayerView = YTPlayerView(frame: videoPlayerFrame)
                     videoPlayerView.delegate = self
+                    videoPlayerView.tag = 102
                     videoPlayerView.loadVideo(videoId: videoID, startTime: timeInSec)
                     
                     //TODO: Проверить качество видео
@@ -153,6 +153,8 @@ class PagerItemViewController: UIViewController, UITextViewDelegate {
     @objc func removeSubview(){
         //print("Start remove subview")
         if let viewWithTag = self.view.viewWithTag(101) {
+            let videoPlayer = viewWithTag.viewWithTag(102) as! YTPlayerView
+            videoPlayer.stopVideo()
             viewWithTag.removeFromSuperview()
         }else{
             print("No!")    //нет SubView с таким тэгом
