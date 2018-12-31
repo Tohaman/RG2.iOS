@@ -7,15 +7,15 @@
 //
 
 import UIKit
-//import YoutubePlayer_in_WKWebView
-import youtube_ios_player_helper_swift
+import YoutubePlayer_in_WKWebView
+//import youtube_ios_player_helper_swift
 
 class PagerItemViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var titleImage: UIImageView!
     @IBOutlet weak var titleText: UILabel!
     @IBOutlet weak var descriptionText: UITextView!
-    @IBOutlet var ytPlayer: YTPlayerView! //WKYTPlayerView!
+    @IBOutlet var ytPlayer: WKYTPlayerView! //WKYTPlayerView!
     @IBOutlet weak var loadingMovieIndicator: UIActivityIndicatorView!
     @IBOutlet weak var playerStackView: UIStackView!
     @IBOutlet weak var commentText: UILabel!
@@ -124,14 +124,12 @@ class PagerItemViewController: UIViewController, UITextViewDelegate {
                     let yAnchor = shadowedWindow.frame.height/2 - (height / 2)
                     let videoPlayerFrame = CGRect(x: 10, y: yAnchor, width: shadowedWindow.frame.width-20, height: height)
                     //                let videoPlayerView = YouTubePlayerView(frame: videoPlayerFrame)
-                    let videoPlayerView = YTPlayerView(frame: videoPlayerFrame)
+                    let videoPlayerView = WKYTPlayerView(frame: videoPlayerFrame)
                     videoPlayerView.delegate = self
                     videoPlayerView.tag = 102
                     videoPlayerView.loadVideo(videoId: videoID, startTime: timeInSec)
                     
-                    //TODO: Проверить качество видео
-                    
-                    //videoPlayerView.load(videoId: videoID, startSeconds: Float(timeInSec) ?? 0.0, suggestedQuality: .auto)
+                    //videoPlayerView.loadVideo(byId: videoID, startSeconds: Float(timeInSec) ?? 0.0, suggestedQuality: .auto)
                     videoPlayerView.autoPlay = true
                     
                     view.addSubview (videoPlayerView)
@@ -153,7 +151,7 @@ class PagerItemViewController: UIViewController, UITextViewDelegate {
     @objc func removeSubview(){
         //print("Start remove subview")
         if let viewWithTag = self.view.viewWithTag(101) {
-            let videoPlayer = viewWithTag.viewWithTag(102) as! YTPlayerView
+            let videoPlayer = viewWithTag.viewWithTag(102) as! WKYTPlayerView
             videoPlayer.stopVideo()
             viewWithTag.removeFromSuperview()
         }else{
@@ -164,7 +162,8 @@ class PagerItemViewController: UIViewController, UITextViewDelegate {
 }
 
 
-extension YTPlayerView {
+extension WKYTPlayerView {
+
     func loadVideo(videoId:String, startTime: String) {
         //https://developers.google.com/youtube/player_parameters
         let playerVars:[String: Any] = [
@@ -178,8 +177,8 @@ extension YTPlayerView {
             "playsinline" : "1",    //полноэкранный режим 1 - нет, 0 - да
             "start" : startTime     //Начальное время в секундах
         ]
-        _ = self.load(videoId: videoId, playerVars: playerVars)
-        _ = self.cue(videoId: videoId, startSeconds: Float(startTime) ?? 0.0, suggestedQuality: .auto)
+        _ = self.load(withVideoId: videoId, playerVars: playerVars)
+        _ = self.cueVideo(byId: videoId, startSeconds: Float(startTime) ?? 0.0, suggestedQuality: .auto)
         
         //Если ставим свои кнопки play/pause, то можно использовать вместе с "controls" : "0"
         //но пока используем стандартные
@@ -192,26 +191,27 @@ extension YTPlayerView {
 }
 
 
-extension PagerItemViewController: YTPlayerViewDelegate  {
-    
-    func playerViewDidBecomeReady(_ playerView: YTPlayerView){
+extension PagerItemViewController: WKYTPlayerViewDelegate  {
+ 
+    func playerViewDidBecomeReady(_ playerView: WKYTPlayerView){
         loadingMovieIndicator.stopAnimating()
         //т.к. autoplay не работает, запускаем play после загрузки видео вручную
-        if playerView.autoPlay { playerView.playVideo() }
+        
+        if playerView.isAutoPlay() { playerView.playVideo() }
     }
     
-    func playerView(_ playerView: YTPlayerView, receivedError error: YTPlayerError) {
+    func playerView(_ playerView: WKYTPlayerView, receivedError error: WKYTPlayerError) {
         print(error)
     }
     
    
     //фон плеера без картинки и видео
-    func playerViewPreferredWebViewBackgroundColor(_ playerView: YTPlayerView) -> UIColor{
+    func playerViewPreferredWebViewBackgroundColor(_ playerView: WKYTPlayerView) -> UIColor{
         return .black
     }
     
     //картинка до загрузки видео
-    func playerViewPreferredInitialLoadingView(_ playerView: YTPlayerView) -> UIView?{
+    func playerViewPreferredInitialLoading(_ playerView: WKYTPlayerView) -> UIView?{
         return UIImageView(image:UIImage(named:"not_found"))
     }
     
