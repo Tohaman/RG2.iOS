@@ -42,7 +42,9 @@ struct Main3x3 : Phases  {
         "Метод для начинающих от Максима Чечнева (7+)",
         "Продвинутые методы (Фридрих (CFOP), ROUX)",
         "Сборка вслепую (Blind)",
-        "Узоры на кубике"
+        "Узоры на кубике",
+        "Пентакль куб",
+        "Контейнер куб"
     ]
     
     let image = [
@@ -51,7 +53,9 @@ struct Main3x3 : Phases  {
         "main_3",
         "main_4",
         "main_5",
-        "main_6"
+        "main_6",
+        "pentacle_4",
+        "container_1"
     ]
     
     let description = [
@@ -60,11 +64,15 @@ struct Main3x3 : Phases  {
         "BEGIN3X3",
         "G2F",
         "BLIND",
-        "PATTERNS"
+        "PATTERNS",
+        "PENTACLE",
+        "CONTAINER"
     ]
     
     let url = [
         Recomend.st1_url,
+        "submenu",
+        "submenu",
         "submenu",
         "submenu",
         "submenu",

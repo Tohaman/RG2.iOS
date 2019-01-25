@@ -134,65 +134,60 @@ struct Patterns: Phases {
     static let st1_descr = """
     <p>Еще больше узоров вы можете найти на сайте <a href=https://speedcubing.ru/tutorial/3x3x3/patterns>speedcubing.ru</a>.</p>
 
-        <p><a href="rg2://ytplay?time=1:01&link=l6V7517N_lQ">Первый узор</a>
-        - точки разного цвета на каждой грани. Один из самых простых алгоритмов.
-        Крутим сначала одну, потом другую среднюю грань (без разницы какую), а потом возвращаем их обратно.
-        Если получилась красная точка на белой грани, то она напоминает \"вишенку\" на торте.
-        </p>
-        <p style="text-align:center"><img src="pattern_1.xml" width="20%%"></p>
-        <b><a href="rg2://ytplay?time=1:16&link=l6V7517N_lQ">Алгоритм:</a> S\' M\' S M</b>
+    <p><a href="rg2://ytplay?time=1:01&link=l6V7517N_lQ">Первый узор</a> - точки разного цвета на каждой грани. Один из самых простых алгоритмов. Крутим сначала одну, потом другую среднюю грань (без разницы какую), а потом возвращаем их обратно. Если получилась красная точка на белой грани, то она напоминает \"вишенку\" на торте.</p>
+    <p style="text-align:center"><img src="pattern_1.xml" width="20%%"></p>
+    <p><b><a href="rg2://ytplay?time=1:16&link=l6V7517N_lQ">Алгоритм:</a> S\' M\' S M</b></p>
+
+    <p>Ну а если вращать противоположные грани в разные стороны а не в одну относительно средней, то можно получить такой вот \"Ход конем\".</p>
+    <p style="text-align:center"><img src="pattern_1_1.xml" width="20%%"></p>
+    <p><b><a href="rg2://ytplay?time=1:16&link=l6V7517N_lQ">Алгоритм:</a> (R L) (U D) (F\' B\') (R\' L\')</b></p>
+
+    <p>P.S. На базе этих двух узоров можно придумать много других, но пожалуйста, не надо мне их присылать, добавить в программу все варианты просто невозможно.</p>
     """
     static let st1_url = "l6V7517N_lQ"
     static let st1_comment = "S\' M\' S M"
     
     static let st2_title = "2. Шахматы"
     static let st2_descr = """
-    <p><a href="rg2://ytplay?time=1:30&link=l6V7517N_lQ">Второй узор,</a> пожалуй еще проще
-        первого, если выполнять, через вращение средних слоев.
-        А смотрится, пожалуй, даже эффектнее предыдущего. Просто вращаем каждый средний слой по два раза
-        или вращаем каждую грань по два раза, но в этом случае вращать надо парами (правую с левой, верхню
-        с нижней, заднюю с передней).
-        </p>
-        <p style="text-align:center"><img src="pattern_2.xml" width="20%%"></p>
-        <p><b><a href="rg2://ytplay?time=1:41&link=l6V7517N_lQ">Алгоритм:</a> R2 L2 U2 D2 F2 B2</b> или <b>M2 S2 E2</b></p>
+    <p><a href="rg2://ytplay?time=1:30&link=l6V7517N_lQ">Второй узор,</a> пожалуй еще проще первого, если выполнять, через вращение средних слоев. А смотрится, пожалуй, даже эффектнее предыдущего. Просто вращаем каждый средний слой по два раза или вращаем каждую грань по два раза, но в этом случае вращать надо парами (правую с левой, верхню с нижней, заднюю с передней).</p>
+    <p style="text-align:center"><img src="pattern_2.xml" width="20%%"></p>
+    <p><b><a href="rg2://ytplay?time=1:41&link=l6V7517N_lQ">Алгоритм:</a> R2 L2 U2 D2 F2 B2</b> или <b>M2 S2 E2</b></p>
 
-        <p>Но шахматы могут быть не только такими простыми, но и немного сложнее.
-        В этом узоре цвета на одной грани уже будут не противоположные, а смежные. Получим
-        <a href="rg2://ytplay?time=1:53&link=l6V7517N_lQ">\"Шахматы 3-го пордяка\".</a></p>
-        <p style="text-align:center"><img src="pattern_2_1.xml" width="20%%"></p>
+    <p>Но шахматы могут быть не только такими простыми, но и немного сложнее. В этом узоре цвета на одной грани уже будут не противоположные, а смежные. Получим <a href="rg2://ytplay?time=1:53&link=l6V7517N_lQ">\"Шахматы 3-го пордяка\".</a></p>
+    <p style="text-align:center"><img src="pattern_2_1.xml" width="20%%"></p>
 
-        <p><b><a href="rg2://ytplay?time=2:10&link=l6V7517N_lQ">Алгоритм:</a> (U2 M2 U M2 U2 S2 D\' S2) z (U2 M2 U M2 U2 S2 D\' S2) (M\' S\' M S)</b></p>
+    <p><b><a href="rg2://ytplay?time=2:10&link=l6V7517N_lQ">Алгоритм:</a> (U2 M2 U M2 U2 S2 D\' S2) z (U2 M2 U M2 U2 S2 D\' S2) (M\' S\' M S)</b></p>
 
-        <p>А если к этому алгоритму еще добавить и простые шахматы,
-        то получим <a href="rg2://ytplay?time=3:03&link=l6V7517N_lQ">\"Шахматы 6-го порядка.\"</a></p>
-        <p style="text-align:center"><img src="pattern_2_2.xml" width="20%%"></p>
-        <p><b><a href="rg2://ytplay?time=3:06&link=l6V7517N_lQ">Алгоритм:</a> (U2 M2 U M2 U2 S2 D\' S2) z (U2 M2 U M2 U2 S2 D\' S2) (M\' S\' M S) (M2 E2 S2)</b></p>
+    <p>А если к этому алгоритму еще добавить и простые шахматы, то получим <a href="rg2://ytplay?time=3:03&link=l6V7517N_lQ">\"Шахматы 6-го порядка.\"</a></p>
+    <p style="text-align:center"><img src="pattern_2_2.xml" width="20%%"></p>
+    <p><b><a href="rg2://ytplay?time=3:06&link=l6V7517N_lQ">Алгоритм:</a> (U2 M2 U M2 U2 S2 D\' S2) z (U2 M2 U M2 U2 S2 D\' S2) (M\' S\' M S) (M2 E2 S2)</b></p>
     """
     static let st2_url = "l6V7517N_lQ"
     static let st2_comment = "M2 S2 E2"
     
     static let st3_title = "3. Кубики"
     static let st3_descr = """
-    <p>Непростой, но очень эффектный узор. Создается впечатление, что внутри кубика 3х3 есть
-        <a href="rg2://ytplay?time=3:23&link=l6V7517N_lQ">еще один кубик 2x2.</a>
-        </p>
-        <p style="text-align:center"><img src="pattern_3.xml" width="20%%"></p>
-        <p><b><a href="rg2://ytplay?time=3:40&link=l6V7517N_lQ">Алгоритм:</a> U2 F2 R2 U\' L2 D B R\' B R\' B R\' D\' L2 U\'</b></p>
+    <p>Непростой, но очень эффектный узор. Создается впечатление, что внутри кубика 3х3 есть <a href="rg2://ytplay?time=3:23&link=l6V7517N_lQ">еще один кубик 2x2.</a></p>
+    <p style="text-align:center"><img src="pattern_3.xml" width="20%%"></p>
+    <p><b><a href="rg2://ytplay?time=3:40&link=l6V7517N_lQ">Алгоритм:</a> U2 F2 R2 U\' L2 D B R\' B R\' B R\' D\' L2 U\'</b></p>
 
-        <p>Ну или кубик 1х1, другое название этого узора - \"Мезон\"</p>
-        <p style="text-align:center"><img src="pattern_3_1.xml" width="20%%"></p>
-        <p><b><a href="rg2://ytplay?time=4:27&link=l6V7517N_lQ">Алгоритм:</a> (U\' B2 U L\' F2 L) (U\' B2 U L\' F2 L)</b></p>
+    <p>Ну или кубик 1х1, другое название этого узора - \"Мезон\"</p>
+    <p style="text-align:center"><img src="pattern_3_1.xml" width="20%%"></p>
+    <p><b><a href="rg2://ytplay?time=4:27&link=l6V7517N_lQ">Алгоритм:</a> (U\' B2 U L\' F2 L) (U\' B2 U L\' F2 L)</b></p>
 
-        <p>А если их объединить, то получится <a href="rg2://ytplay?time=4:24&link=l6V7517N_lQ">\"Кубик в кубе в кубе\"</a></p>
-        <p style="text-align:center"><img src="pattern_3_2.xml" width="20%%"></p>
+    <p>А если их объединить, то получится <a href="rg2://ytplay?time=4:24&link=l6V7517N_lQ">\"Кубик в кубе в кубе\"</a></p>
+    <p style="text-align:center"><img src="pattern_3_2.xml" width="20%%"></p>
 
-        <p>Или можно сделать этот узор в один алгоритм:</p>
-        <p><b><a href="rg2://ytplay?time=5:00&link=l6V7517N_lQ">Алгоритм:</a> U\' L2 F2 D\' L\' D U2 R U\' R\' U2 R2 U F\' L\' U R\'</b></p>
+    <p>Или можно сделать этот узор в один алгоритм:</p>
+    <p><b><a href="rg2://ytplay?time=5:00&link=l6V7517N_lQ">Алгоритм:</a> U\' L2 F2 D\' L\' D U2 R U\' R\' U2 R2 U F\' L\' U R\'</b></p>
 
-        <p>А если сделать \"Мезон\" еще раз, то получатся \"Кольца\". Ну или можно их сделать в один алгоритм.</p>
-        <p style="text-align:center"><img src="pattern_3_3.xml" width="20%%"></p>
-        <p><b><a href="rg2://ytplay?time=5:31&link=l6V7517N_lQ">Алгоритм:</a> U\' L2 F2 D\' L\' D U2 R U\' R\' U2 R2 U F\' L\' U R\'</b></p>
+    <p>А если сделать \"Мезон\" еще раз, то получатся \"Кольца\". Ну или можно их сделать в один алгоритм.</p>
+    <p style="text-align:center"><img src="pattern_3_3.xml" width="20%%"></p>
+    <p><b><a href="rg2://ytplay?time=5:31&link=l6V7517N_lQ">Алгоритм:</a> U\' L2 F2 D\' L\' D U2 R U\' R\' U2 R2 U F\' L\' U R\'</b></p>
 
+    <p>Ну а если еще переставить ребра, то можно получить и вот такой узор. Спасибо Хахулину Даниилу за идею.</p>
+    <p style="text-align:center"><img src="pattern_3_4.xml" width="20%%"></p>
+    <p><b><a href="rg2://ytplay?time=5:31&link=l6V7517N_lQ">Алгоритм:</a> B D F\' B\' D L2\' U L U\' B D\' R B R D\' R L\' F U2 D</b></p>
     """
     static let st3_url = "l6V7517N_lQ"
     static let st3_comment = "U2 F2 R2 U\' L2 D B R\' B R\' B R\' D\' L2 U\'"
