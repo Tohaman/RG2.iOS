@@ -44,7 +44,8 @@ struct Main3x3 : Phases  {
         "Сборка вслепую (Blind)",
         "Узоры на кубике",
         "Пентакль куб",
-        "Контейнер куб"
+        "Контейнер куб",
+        "Фишер куб"
     ]
     
     let image = [
@@ -55,7 +56,8 @@ struct Main3x3 : Phases  {
         "main_5",
         "main_6",
         "pentacle_4",
-        "container_1"
+        "container_1",
+        "fisher_10"
     ]
     
     let description = [
@@ -66,11 +68,13 @@ struct Main3x3 : Phases  {
         "BLIND",
         "PATTERNS",
         "PENTACLE",
-        "CONTAINER"
+        "CONTAINER",
+        "FISHER"
     ]
     
     let url = [
         Recomend.st1_url,
+        "submenu",
         "submenu",
         "submenu",
         "submenu",

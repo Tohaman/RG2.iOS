@@ -38,6 +38,7 @@ class ListPagerLab {
         phaseInit(phasesStrings: Blind())
         phaseInit(phasesStrings: Container())
         phaseInit(phasesStrings: Cross())
+        phaseInit(phasesStrings: Fisher())
         phaseInit(phasesStrings: IntF2L())
         phaseInit(phasesStrings: Patterns())
         phaseInit(phasesStrings: Pll())
