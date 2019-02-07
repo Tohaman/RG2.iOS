@@ -171,7 +171,12 @@ struct Patterns: Phases {
     <p style="text-align:center"><img src="pattern_3.xml" width="20%%"></p>
     <p><b><a href="rg2://ytplay?time=3:40&link=l6V7517N_lQ">Алгоритм:</a> U2 F2 R2 U\' L2 D B R\' B R\' B R\' D\' L2 U\'</b></p>
 
-    <p>Ну или кубик 1х1, другое название этого узора - \"Мезон\"</p>
+    <p>А если не крутить крышу в самом начале, то получится вот такой \"Разноцветный куб в кубе\", к сожалению узор не симметричный и такой кубик только на обратной стороне. Никита, спасибо за идею.</p>
+    <p style="text-align:center"><img src="pattern_3_5.xml" width="20%%"></p>
+
+    <p>Алгоритм: F2 R2 U\' L2 D B R\' B R\' B R\' D\' L2 U\' (y2 x)</p>
+
+    <p>А можно сделать и кубик 1х1, другое название этого узора - \"Мезон\"</p>
     <p style="text-align:center"><img src="pattern_3_1.xml" width="20%%"></p>
     <p><b><a href="rg2://ytplay?time=4:27&link=l6V7517N_lQ">Алгоритм:</a> (U\' B2 U L\' F2 L) (U\' B2 U L\' F2 L)</b></p>
 
@@ -251,6 +256,10 @@ struct Patterns: Phases {
         <a href="rg2://ytplay?time=11:24&link=l6V7517N_lQ">Пропеллер.</a></p>
     <p style="text-align:center"><img src="pattern_7_2.xml" width="20%%"></p>
     <p><b><a href="rg2://ytplay?time=11:40&link=l6V7517N_lQ">Алгоритм:</a> U\' L2 U2 R2 U\' B2 L\' B D R\' B\' L\' B\' D2 B\' L D B\' U</b></p>
+
+    <p>Еще можно выполнить вот такой алгоритм, получится интересный, но не симметричный узор. С одной стороны длинные уголки, а с другой четыре уголка не на своих местах.</p>
+    <p style="text-align:center"><img src="pattern_7_3.xml" width="30%%"></p>
+    <p><b>Алгоритм: (R\' U R\' D)(F D2 F\' D) R2 (U L2) (U L2) U</b></p>
     """
     static let st7_url = "l6V7517N_lQ"
     static let st7_comment = "F2 R2 D R2 D U F2 D\' R\' D\' F L2 F\' D R U\'"
