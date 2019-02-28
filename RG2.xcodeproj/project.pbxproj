@@ -43,7 +43,9 @@
 		3A73E22F21CCE1FB004648F2 /* ListPager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A73E22E21CCE1FB004648F2 /* ListPager.storyboard */; };
 		3A9A45632209832800BA1423 /* Fisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A45622209832800BA1423 /* Fisher.swift */; };
 		3AAF1F2421C28F3900FC7632 /* Patterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF1F2321C28F3900FC7632 /* Patterns.swift */; };
+		3AB878DE2212DC9500BDF3D1 /* gear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB878DD2212DC9500BDF3D1 /* gear.swift */; };
 		3AD59E2A21F38404007C4888 /* Pentacle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD59E2921F38404007C4888 /* Pentacle.swift */; };
+		3AE124CA2226BCA200524345 /* Prisma.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE124C92226BCA200524345 /* Prisma.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -96,7 +98,9 @@
 		3A73E22E21CCE1FB004648F2 /* ListPager.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListPager.storyboard; sourceTree = "<group>"; };
 		3A9A45622209832800BA1423 /* Fisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fisher.swift; sourceTree = "<group>"; };
 		3AAF1F2321C28F3900FC7632 /* Patterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patterns.swift; sourceTree = "<group>"; };
+		3AB878DD2212DC9500BDF3D1 /* gear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gear.swift; sourceTree = "<group>"; };
 		3AD59E2921F38404007C4888 /* Pentacle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pentacle.swift; sourceTree = "<group>"; };
+		3AE124C92226BCA200524345 /* Prisma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prisma.swift; sourceTree = "<group>"; };
 		9823C93373549609456210EB /* Pods_RG2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RG2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7723AC2BA69F48D95FE7BA9 /* Pods-RG2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RG2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RG2/Pods-RG2.debug.xcconfig"; sourceTree = "<group>"; };
 		F57566168E6668C69C9AE973 /* Pods-RG2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RG2.release.xcconfig"; path = "Pods/Target Support Files/Pods-RG2/Pods-RG2.release.xcconfig"; sourceTree = "<group>"; };
@@ -228,6 +232,8 @@
 				3AD59E2921F38404007C4888 /* Pentacle.swift */,
 				3A1EDE3321FB2292007406C5 /* Container.swift */,
 				3A9A45622209832800BA1423 /* Fisher.swift */,
+				3AE124C92226BCA200524345 /* Prisma.swift */,
+				3AB878DD2212DC9500BDF3D1 /* gear.swift */,
 			);
 			path = "3x3 main menu";
 			sourceTree = "<group>";
@@ -421,6 +427,7 @@
 				3A66393721D2145100D452D0 /* Cross.swift in Sources */,
 				3A4B193821BF9A3500CB6F4D /* ListPagerViewController.swift in Sources */,
 				3A25733221C6A6E6002E6EE9 /* LabelExt.swift in Sources */,
+				3AB878DE2212DC9500BDF3D1 /* gear.swift in Sources */,
 				3A255BFC21B1BD76002FA07B /* Begin3x3.swift in Sources */,
 				3A4E692D21C122040013EFA0 /* G2F.swift in Sources */,
 				3A66393921D26C9100D452D0 /* IntF2L.swift in Sources */,
@@ -442,6 +449,7 @@
 				3A1CE06221DBF53D001677A9 /* Oll.swift in Sources */,
 				3A255BF921B1BA32002FA07B /* MainTableViewCell.swift in Sources */,
 				3A255BE421B1A1EB002FA07B /* AppDelegate.swift in Sources */,
+				3AE124CA2226BCA200524345 /* Prisma.swift in Sources */,
 				3A4E692F21C13B220013EFA0 /* Recomendation.swift in Sources */,
 				3A25733421C6C2C4002E6EE9 /* Blind.swift in Sources */,
 				3AAF1F2421C28F3900FC7632 /* Patterns.swift in Sources */,

@@ -43,9 +43,11 @@ struct Main3x3 : Phases  {
         "Продвинутые методы (Фридрих (CFOP), ROUX)",
         "Сборка вслепую (Blind)",
         "Узоры на кубике",
-        "Пентакль куб",
-        "Контейнер куб",
-        "Фишер куб"
+        "Призма Рубика",
+        "Шестеренчатый (Gear) куб",
+        "Пентакль (Pentacle) куб",
+        "Контейнер (Container) куб",
+        "Фишер (Fisher) куб"
     ]
     
     let image = [
@@ -55,6 +57,8 @@ struct Main3x3 : Phases  {
         "main_4",
         "main_5",
         "main_6",
+        "prisma_8",
+        "gear_2",
         "pentacle_4",
         "container_1",
         "fisher_10"
@@ -67,6 +71,8 @@ struct Main3x3 : Phases  {
         "G2F",
         "BLIND",
         "PATTERNS",
+        "PRISMA",
+        "GEAR",
         "PENTACLE",
         "CONTAINER",
         "FISHER"
@@ -74,6 +80,8 @@ struct Main3x3 : Phases  {
     
     let url = [
         Recomend.st1_url,
+        "submenu",
+        "submenu",
         "submenu",
         "submenu",
         "submenu",

@@ -39,10 +39,13 @@ class ListPagerLab {
         phaseInit(phasesStrings: Container())
         phaseInit(phasesStrings: Cross())
         phaseInit(phasesStrings: Fisher())
+        phaseInit(phasesStrings: Gear())
         phaseInit(phasesStrings: IntF2L())
+        phaseInit(phasesStrings: Oll())
         phaseInit(phasesStrings: Patterns())
         phaseInit(phasesStrings: Pll())
         phaseInit(phasesStrings: Pentacle())
+        phaseInit(phasesStrings: Prisma())
         phaseInit(phasesStrings: Recomend())
         phaseInit(phasesStrings: Rozov3x3())
         
