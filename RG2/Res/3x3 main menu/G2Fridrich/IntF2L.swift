@@ -38,12 +38,14 @@ struct IntF2L: Phases {
         st1_title,
         st2_title,
         st3_title,
-        st4_title
+        st4_title,
+        st5_title
     ]
     
     let image = [
         "ic_f2l",
         "f2l_int_19",
+        "f2l_int_21",
         "f2l_int_21",
         "f2l_int_29"
     ]
@@ -52,7 +54,8 @@ struct IntF2L: Phases {
         st1_url,
         st2_url,
         st3_url,
-        st4_url
+        st4_url,
+        st5_url
     ]
     
     
@@ -60,7 +63,8 @@ struct IntF2L: Phases {
         st1_descr,
         st2_descr,
         st3_descr,
-        st4_descr
+        st4_descr,
+        st5_descr
     ]
     
     
@@ -358,5 +362,15 @@ struct IntF2L: Phases {
     """
     static let st4_url = "8y-RkaihG_c"
     
-    
+    static let st5_title = "Интуитивный F2L (Основные ошибки при выполнении)"
+    static let st5_descr = """
+    <p>Начну с цели Интуитивного F2L, которую почему-то, многие пропускают или не понимают - <i><b>цель Интуитивного F2L
+    не в том, чтобы загнать пару, а в том, чтобы получить одну из двух базовых ситуаций на верхней грани.</b></i></p>
+
+    <p>Базовые же ситуации уже легко решаются в три хода.</p>
+
+    <p>Ну а о том, как упростить получение базовых ситуации, и как не усложнять самому себе жизнь и
+    пойдет речь в этом видео. Текстовки к нему не будет, т.к. его надо именно смотреть.</p>
+    """
+    static let st5_url = "TjT2lPBa8r0"
 }

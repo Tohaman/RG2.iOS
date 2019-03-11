@@ -49,7 +49,8 @@ struct Patterns: Phases {
         st13_title,
         st14_title,
         st15_title,
-        st16_title
+        st16_title,
+        st17_title
     ]
     
     let image = [
@@ -68,7 +69,8 @@ struct Patterns: Phases {
         "pattern_13",
         "pattern_14",
         "pattern_15",
-        "pattern_16"
+        "pattern_16",
+        "pattern_17"
     ]
     
     let url = [
@@ -87,7 +89,8 @@ struct Patterns: Phases {
         st13_url,
         st14_url,
         st15_url,
-        st16_url
+        st16_url,
+        st17_url
     ]
     
     
@@ -107,7 +110,8 @@ struct Patterns: Phases {
         st13_descr,
         st14_descr,
         st15_descr,
-        st16_descr
+        st16_descr,
+        st17_descr
     ]
     
     let comment = [
@@ -126,7 +130,8 @@ struct Patterns: Phases {
         st13_comment,
         st14_comment,
         st15_comment,
-        st16_comment
+        st16_comment,
+        st17_comment
     ]
     
     
@@ -167,11 +172,13 @@ struct Patterns: Phases {
     
     static let st3_title = "3. Кубики"
     static let st3_descr = """
-    <p>Непростой, но очень эффектный узор. Создается впечатление, что внутри кубика 3х3 есть <a href="rg2://ytplay?time=3:23&link=l6V7517N_lQ">еще один кубик 2x2.</a></p>
+    <p>Непростой, но очень эффектный узор. Создается впечатление, что внутри кубика 3х3 есть
+    <a href="rg2://ytplay?time=3:23&link=l6V7517N_lQ">еще один кубик 2x2.</a></p>
     <p style="text-align:center"><img src="pattern_3.xml" width="20%%"></p>
     <p><b><a href="rg2://ytplay?time=3:40&link=l6V7517N_lQ">Алгоритм:</a> U2 F2 R2 U\' L2 D B R\' B R\' B R\' D\' L2 U\'</b></p>
 
-    <p>А если не крутить крышу в самом начале, то получится вот такой \"Разноцветный куб в кубе\", к сожалению узор не симметричный и такой кубик только на обратной стороне. Никита, спасибо за идею.</p>
+    <p>А если не крутить крышу в самом начале, то получится вот такой \"Разноцветный куб в кубе\", к
+    сожалению узор не симметричный и такой кубик только на обратной стороне. Никита, спасибо за идею.</p>
     <p style="text-align:center"><img src="pattern_3_5.xml" width="20%%"></p>
 
     <p>Алгоритм: F2 R2 U\' L2 D B R\' B R\' B R\' D\' L2 U\' (y2 x)</p>
@@ -188,11 +195,24 @@ struct Patterns: Phases {
 
     <p>А если сделать \"Мезон\" еще раз, то получатся \"Кольца\". Ну или можно их сделать в один алгоритм.</p>
     <p style="text-align:center"><img src="pattern_3_3.xml" width="20%%"></p>
+
     <p><b><a href="rg2://ytplay?time=5:31&link=l6V7517N_lQ">Алгоритм:</a> U\' L2 F2 D\' L\' D U2 R U\' R\' U2 R2 U F\' L\' U R\'</b></p>
 
     <p>Ну а если еще переставить ребра, то можно получить и вот такой узор. Спасибо Хахулину Даниилу за идею.</p>
     <p style="text-align:center"><img src="pattern_3_4.xml" width="20%%"></p>
+
     <p><b><a href="rg2://ytplay?time=5:31&link=l6V7517N_lQ">Алгоритм:</a> B D F\' B\' D L2\' U L U\' B D\' R B R D\' R L\' F U2 D</b></p>
+
+    <p>Вот еще узор похожий на кубик в кубе - \"Буквы Р\". Спасибо Мише Flex.</p>
+    <p style="text-align:center"><img src="pattern_3_7.xml" width="20%%"></p>
+
+    <p><b>Алгоритм: F R\' U L F\' L\' F U\' R U L\' U\' L F\'</b></p>
+
+    <p>И не могу сюда не добавить узор от Виктора Фроста, который можно назвать \"Кубоид в кубе\". Ну
+    а как он выглядит с другой стороны, предлагаю вам узнать самим.</p>
+    <p style="text-align:center"><img src="pattern_3_6.xml" width="20%%"></p>
+
+    <p><b>Алгоритм: L2 B2 D\' B2 D L2 U R2 D R2 B U R\' F2 R U\' B\' U\'</b></p>
     """
     static let st3_url = "l6V7517N_lQ"
     static let st3_comment = "U2 F2 R2 U\' L2 D B R\' B R\' B R\' D\' L2 U\'"
@@ -200,25 +220,31 @@ struct Patterns: Phases {
     static let st4_title = "4. Змеи"
     static let st4_descr = """
     <p>Еще один очень красивый узор. <a href="rg2://ytplay?time=5:57&link=l6V7517N_lQ">Змейка</a> через весь кубик.</p>
-        <p style="text-align:center"><img src="pattern_4.xml" width="20%%"></p>
-        <p><b><a href="rg2://ytplay?time=6:27&link=l6V7517N_lQ">Алгоритм:</a> U B2 L D B\' F L\' D  U\' L\' R F\' D2 R\'</b></p>
+    <p style="text-align:center"><img src="pattern_4.xml" width="20%%"></p>
+    <p><b><a href="rg2://ytplay?time=6:27&link=l6V7517N_lQ">Алгоритм:</a> U B2 L D B\' F L\' D  U\' L\' R F\' D2 R\'</b></p>
 
-        <p>Или еще другой вариант Змейки:</p>
-        <p style="text-align:center"><img src="pattern_4_1.xml" width="20%%"></p>
-        <p><b><a href="rg2://ytplay?time=7:02&link=l6V7517N_lQ">Алгоритм:</a> (R F B\' D\') F2 (D B F\' R\') F2 (U R2 U\') (D F2 D\')</b></p>
+    <p>Или еще другой вариант Змейки:</p>
+    <p style="text-align:center"><img src="pattern_4_1.xml" width="20%%"></p>
+    <p><b><a href="rg2://ytplay?time=7:02&link=l6V7517N_lQ">Алгоритм:</a> (R F B\' D\') F2 (D B F\' R\') F2 (U R2 U\') (D F2 D\')</b></p>
+
+    <p>Узор, который тоже можно отнести к змейкам, ведь он идет через весь кубик.</p>
+    <p style="text-align:center"><img src="pattern_4_2.xml" width="20%%"></p>
+
+    <p><b>Алгоритм: D L\' U R\' B\' R B U2 D B D\' B\' L U D\'</b></p>
     """
     static let st4_url = "l6V7517N_lQ"
     static let st4_comment = "U B2 L D B\' F L\' D  U\' L\' R F\' D2 R\'"
     
     static let st5_title = "5. Кресты"
     static let st5_descr = """
-    <p><a href="rg2://ytplay?time=7:34&link=l6V7517N_lQ">Крест</a> на каждой стороне кубика.
-        </p>
+    <p><a href="rg2://ytplay?time=7:34&link=l6V7517N_lQ">Крест</a> на каждой стороне кубика.</p>
     <p style="text-align:center"><img src="pattern_5.xml" width="20%%"></p>
-        <p><b><a href="rg2://ytplay?time=7:54&link=l6V7517N_lQ">Алгоритм:</a> L2 R\' B2 F2 D2 B2 F2 L2 R2 U2 R\'</b></p>
+
+    <p><b><a href="rg2://ytplay?time=7:54&link=l6V7517N_lQ">Алгоритм:</a> L2 R\' B2 F2 D2 B2 F2 L2 R2 U2 R\'</b></p>
 
     <p>Еще один крест, уголки которого <a href="rg2://ytplay?time=7:34&link=l6V7517N_lQ">стоят иначе.</a></p>
     <p style="text-align:center"><img src="pattern_5_1.xml" width="20%%"></p>
+
     <p><b><a href="rg2://ytplay?time=8:29&link=l6V7517N_lQ">Алгоритм:</a> U F B\' L2 U2 L2 F\' B U2 L2 U</b></p>
     """
     static let st5_url = "l6V7517N_lQ"
@@ -235,6 +261,10 @@ struct Patterns: Phases {
     <p>Если использовать двойные вращения граней, такие как (R2 F2 B2) или вращения противоположных граней в разные стороны, такие как (D\'U\' FB LR), то можно получить много разных довольно интересных узоров, например:</p>
     <p style="text-align:center"><img src="pattern_6_1.xml" width="20%%"></p>
     <p>Алгоритм: <b>F2 R2 D\'U\' (R2 B2 L2 F2) DU F2 R2</b></p>
+
+    <p>Или вот такой:</p>
+    <p style="text-align:center"><img src="pattern_6_2.xml" width="20%%"></p>
+    <p>Алгоритм: <b>(R L) U2 F2 D2 F2 (R L) F2 D2 B2 D2</b></p>
 
      <p>P.S. Спасибо всем приславшим подобные узоры, особенно Диме Юрченко, но к сожалению, все такие узоры добавить в программу просто нереально, поэтому, надеюсь, что остальные узоры основанные на этих вращениях вы сможете сделать/придумать сами.</p>
     """
@@ -260,6 +290,19 @@ struct Patterns: Phases {
     <p>Еще можно выполнить вот такой алгоритм, получится интересный, но не симметричный узор. С одной стороны длинные уголки, а с другой четыре уголка не на своих местах.</p>
     <p style="text-align:center"><img src="pattern_7_3.xml" width="30%%"></p>
     <p><b>Алгоритм: (R\' U R\' D)(F D2 F\' D) R2 (U L2) (U L2) U</b></p>
+
+    <p>Еще один вариант уголков от пользователя Gros Lep.</p>
+    <p style="text-align:center"><img src="pattern_7_4.xml" width="20%%"></p>
+
+    <p><b>Алгоритм: U\' D B R\' F R B\' L\' F\' B L F R\' B\' R F\' U\' D</b></p>
+
+    <p>Или вот такой уголок от Петра Петрова.</p>
+    <p style="text-align:center"><img src="pattern_7_5.xml" width="20%%"></p>
+
+    <p><b>Алгоритм: U\' R2 D\' B\' D R\' D\' B D R\' U</b></p>
+
+    <p>А если к нему добавить вишенку: <b>M\' S\' M S</b>, то получатся вот такие буквы М.</p>
+    <p style="text-align:center"><img src="pattern_7_6.xml" width="20%%"></p>
     """
     static let st7_url = "l6V7517N_lQ"
     static let st7_comment = "F2 R2 D R2 D U F2 D\' R\' D\' F L2 F\' D R U\'"
@@ -404,26 +447,55 @@ struct Patterns: Phases {
     
     static let st16_title = "16. Свой алгоритм/узор"
     static let st16_descr = """
-    <p>Если у вас есть свой алгоритм для какого-то из выше приведенных узоров, то всегда можете
+    <p>Иногда мне присылают очень непонятные узоры, которые и узорами то не всегда можно назвать, но
+        кого-то может они и сподвигнут на разглядывание кубика часами.</p>
+        <p>Я не буду указывать авторство этих узоров, чтобы не провоцировать новую волну, больше я
+        такие узоры добавлять не буду. Надеюсь, авторы меня за это простят.</p>
+
+    <p>Начну, пожалуй, с \"Больших блоков в окружении\".</p>
+    <p style="text-align:center"><img src="pattern_16.xml" width="20%%"></p>
+
+    <p>Алгоритм: <b>U B2 D2 L B\' L\' U\' L\' B D2 B2 </b></p>
+
+    <p>Или вот еще \"Кубик на дискотеке\".</p>
+    <p style="text-align:center"><img src="pattern_16_1.xml" width="20%%"></p>
+
+    <p>Алгоритм: <b>R\' F\' U F2 U\' F R\' F2 D2 F2 D2 F2 D F2 R2 U2</b></p>
+
+    <p>Ну и бесспорный шедевр - \"Порядок в хаосе\".</p>
+    <p style="text-align:center"><img src="pattern_16_2.xml" width="20%%"></p>
+
+    <p>Алгоритм: <b>B L2 B\' U2 B F2 U L U B U\' R U\' B F U\' R D R B\' U\'</b></p>
+    """
+    static let st16_url = "l6V7517N_lQ"
+    static let st16_comment = "B L2 B\' U2 B F2 U L U B U\' R U\' B F U\' R D R B\' U\'"
+    
+    static let st17_title = "16. Свой алгоритм/узор"
+    static let st17_descr = """
+        <p>Если у вас есть свой алгоритм для какого-то из выше приведенных узоров, то всегда можете
         написать его в поле \"Свой комментариий (алгоритм):\" к соответствующему этапу (ниже видео)
         и он отобразится в списке.</p>
 
-    <p>А если у вас есть какой-то узор и:<br/><br/>
+        <p>А если у вас есть какой-то узор и:<br/><br/>
         1. Узора <b>нет на сайте <a href=https://speedcubing.ru/tutorial/3x3x3/patterns>speedcubing.ru</a></b><br/>
         2. Этого узора нет в программе<br/>
         3. В узоре БОЛЬШЕ 6 ходов<br/>
         4. Это <b>НЕ простой</b> узор состоящий только из двойных ходов, типа (R2 U2 L2 U2)3 или
-        вращений противоположных граней (R L F B)3<br/>
+        вращений противоположных граней (RL FB)3 (см. узор \"Молния в точку\")<br/>
         5. Это <b>НЕ вариации</b> различных \"Букв Н\" или \"Крестов\"<br/>
         6. Узор состоит <b>НЕ из других</b> простых узоров.<br/>
         7. В узоре меняются местами НЕ ТОЛЬКО ребра, но и углы.<br/><br/>
+        8. Достаточно Авангарда, узор должен быть узором, а не просто скрамблом.<br/><br/>
         то присылайте его мне на почту
         <a href="mailto:rubicsguide@yandex.ru?subject=Узоры&body=Здравствуйте,%20Антон.">rubicsguide@yandex.ru</a><br/>
         И если ваш узор <b>действительно интересный</b>, я его обязательно добавлю в программу.</p>
 
-    <p>P.S. Поймите, что эти требования появились не зря, и придумать простой узор, может каждый, кто хоть немного увлекается этой темой. К сожалению 99% присланных мне узоров - это простые реберные узоры, которые я не добавляю в программу. И таких простых узоров десятки, если не сотни и все их просто невозможно добавить в программу.
-    </p>
+        <p>P.S. Поймите, что эти требования появились не зря, и придумать простой узор, может каждый, кто хоть
+        немного увлекается этой темой. К сожалению 99% присланных мне узоров - это простые реберные узоры, которые я не
+        добавляю в программу. И таких простых узоров десятки, если не сотни и все их просто
+        невозможно добавить в программу.
+        </p>
     """
-    static let st16_url = "l6V7517N_lQ"
-    static let st16_comment = ""
+    static let st17_url = "l6V7517N_lQ"
+    static let st17_comment = ""
 }
