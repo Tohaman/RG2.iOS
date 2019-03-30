@@ -60,7 +60,7 @@ struct Main3x3 : Phases  {
         "main_4",
         "main_5",
         "main_6",
-        "pyramorphix",
+        "pyramorphix_7",
         "tw_skewb",
         "cylinder_6",
         "prisma_8",
