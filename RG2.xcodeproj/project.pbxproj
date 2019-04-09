@@ -46,7 +46,8 @@
 		3A9A1365224BAC630034B904 /* Pyramorphix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A1364224BAC630034B904 /* Pyramorphix.swift */; };
 		3A9A45632209832800BA1423 /* Fisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A45622209832800BA1423 /* Fisher.swift */; };
 		3AAF1F2421C28F3900FC7632 /* Patterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF1F2321C28F3900FC7632 /* Patterns.swift */; };
-		3AB878DE2212DC9500BDF3D1 /* gear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB878DD2212DC9500BDF3D1 /* gear.swift */; };
+		3AB878DE2212DC9500BDF3D1 /* Gear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB878DD2212DC9500BDF3D1 /* Gear.swift */; };
+		3AC301832254866800C6CCDE /* Pyraminx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC301822254866800C6CCDE /* Pyraminx.swift */; };
 		3AD59E2A21F38404007C4888 /* Pentacle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD59E2921F38404007C4888 /* Pentacle.swift */; };
 		3AE124CA2226BCA200524345 /* Prisma.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE124C92226BCA200524345 /* Prisma.swift */; };
 /* End PBXBuildFile section */
@@ -104,7 +105,8 @@
 		3A9A1364224BAC630034B904 /* Pyramorphix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pyramorphix.swift; sourceTree = "<group>"; };
 		3A9A45622209832800BA1423 /* Fisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fisher.swift; sourceTree = "<group>"; };
 		3AAF1F2321C28F3900FC7632 /* Patterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patterns.swift; sourceTree = "<group>"; };
-		3AB878DD2212DC9500BDF3D1 /* gear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gear.swift; sourceTree = "<group>"; };
+		3AB878DD2212DC9500BDF3D1 /* Gear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gear.swift; sourceTree = "<group>"; };
+		3AC301822254866800C6CCDE /* Pyraminx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pyraminx.swift; sourceTree = "<group>"; };
 		3AD59E2921F38404007C4888 /* Pentacle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pentacle.swift; sourceTree = "<group>"; };
 		3AE124C92226BCA200524345 /* Prisma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prisma.swift; sourceTree = "<group>"; };
 		9823C93373549609456210EB /* Pods_RG2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RG2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,8 +243,9 @@
 				3AE124C92226BCA200524345 /* Prisma.swift */,
 				3A45FE0A22343E9800DED75E /* Cylinder.swift */,
 				3A9A1364224BAC630034B904 /* Pyramorphix.swift */,
+				3AC301822254866800C6CCDE /* Pyraminx.swift */,
 				3A240349224009080075FE08 /* Twisty_skewb.swift */,
-				3AB878DD2212DC9500BDF3D1 /* gear.swift */,
+				3AB878DD2212DC9500BDF3D1 /* Gear.swift */,
 			);
 			path = "3x3 main menu";
 			sourceTree = "<group>";
@@ -438,7 +441,7 @@
 				3A66393721D2145100D452D0 /* Cross.swift in Sources */,
 				3A4B193821BF9A3500CB6F4D /* ListPagerViewController.swift in Sources */,
 				3A25733221C6A6E6002E6EE9 /* LabelExt.swift in Sources */,
-				3AB878DE2212DC9500BDF3D1 /* gear.swift in Sources */,
+				3AB878DE2212DC9500BDF3D1 /* Gear.swift in Sources */,
 				3A255BFC21B1BD76002FA07B /* Begin3x3.swift in Sources */,
 				3A9A1365224BAC630034B904 /* Pyramorphix.swift in Sources */,
 				3A4E692D21C122040013EFA0 /* G2F.swift in Sources */,
@@ -466,6 +469,7 @@
 				3A24034A224009080075FE08 /* Twisty_skewb.swift in Sources */,
 				3A25733421C6C2C4002E6EE9 /* Blind.swift in Sources */,
 				3AAF1F2421C28F3900FC7632 /* Patterns.swift in Sources */,
+				3AC301832254866800C6CCDE /* Pyraminx.swift in Sources */,
 				3A04B4C221B8FEE9006642B6 /* Reach.swift in Sources */,
 				3A255C0121B1BDDC002FA07B /* ListPager.swift in Sources */,
 				3A4B193D21BFB33800CB6F4D /* Rozov3x3.swift in Sources */,
