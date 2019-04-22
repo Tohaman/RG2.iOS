@@ -45,9 +45,10 @@
 		3A73E22F21CCE1FB004648F2 /* ListPager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A73E22E21CCE1FB004648F2 /* ListPager.storyboard */; };
 		3A9A1365224BAC630034B904 /* Pyramorphix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A1364224BAC630034B904 /* Pyramorphix.swift */; };
 		3A9A45632209832800BA1423 /* Fisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A45622209832800BA1423 /* Fisher.swift */; };
+		3AA00943226DE2FE00A76BA3 /* TwistyCube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA00942226DE2FE00A76BA3 /* TwistyCube.swift */; };
 		3AAF1F2421C28F3900FC7632 /* Patterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF1F2321C28F3900FC7632 /* Patterns.swift */; };
 		3AB878DE2212DC9500BDF3D1 /* Gear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB878DD2212DC9500BDF3D1 /* Gear.swift */; };
-		3AC301832254866800C6CCDE /* Pyraminx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC301822254866800C6CCDE /* Pyraminx.swift */; };
+		3AC301832254866800C6CCDE /* Keyhole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC301822254866800C6CCDE /* Keyhole.swift */; };
 		3AD59E2A21F38404007C4888 /* Pentacle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD59E2921F38404007C4888 /* Pentacle.swift */; };
 		3AE124CA2226BCA200524345 /* Prisma.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE124C92226BCA200524345 /* Prisma.swift */; };
 /* End PBXBuildFile section */
@@ -104,9 +105,10 @@
 		3A73E22E21CCE1FB004648F2 /* ListPager.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListPager.storyboard; sourceTree = "<group>"; };
 		3A9A1364224BAC630034B904 /* Pyramorphix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pyramorphix.swift; sourceTree = "<group>"; };
 		3A9A45622209832800BA1423 /* Fisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fisher.swift; sourceTree = "<group>"; };
+		3AA00942226DE2FE00A76BA3 /* TwistyCube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwistyCube.swift; sourceTree = "<group>"; };
 		3AAF1F2321C28F3900FC7632 /* Patterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patterns.swift; sourceTree = "<group>"; };
 		3AB878DD2212DC9500BDF3D1 /* Gear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gear.swift; sourceTree = "<group>"; };
-		3AC301822254866800C6CCDE /* Pyraminx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pyraminx.swift; sourceTree = "<group>"; };
+		3AC301822254866800C6CCDE /* Keyhole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyhole.swift; sourceTree = "<group>"; };
 		3AD59E2921F38404007C4888 /* Pentacle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pentacle.swift; sourceTree = "<group>"; };
 		3AE124C92226BCA200524345 /* Prisma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prisma.swift; sourceTree = "<group>"; };
 		9823C93373549609456210EB /* Pods_RG2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RG2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -243,9 +245,10 @@
 				3AE124C92226BCA200524345 /* Prisma.swift */,
 				3A45FE0A22343E9800DED75E /* Cylinder.swift */,
 				3A9A1364224BAC630034B904 /* Pyramorphix.swift */,
-				3AC301822254866800C6CCDE /* Pyraminx.swift */,
+				3AC301822254866800C6CCDE /* Keyhole.swift */,
 				3A240349224009080075FE08 /* Twisty_skewb.swift */,
 				3AB878DD2212DC9500BDF3D1 /* Gear.swift */,
+				3AA00942226DE2FE00A76BA3 /* TwistyCube.swift */,
 			);
 			path = "3x3 main menu";
 			sourceTree = "<group>";
@@ -413,7 +416,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RG2/Pods-RG2-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-RG2/Pods-RG2-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/YoutubePlayer-in-WKWebView/YoutubePlayer_in_WKWebView.framework",
 			);
@@ -426,7 +429,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RG2/Pods-RG2-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RG2/Pods-RG2-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -464,12 +467,13 @@
 				3A1CE06221DBF53D001677A9 /* Oll.swift in Sources */,
 				3A255BF921B1BA32002FA07B /* MainTableViewCell.swift in Sources */,
 				3A255BE421B1A1EB002FA07B /* AppDelegate.swift in Sources */,
+				3AA00943226DE2FE00A76BA3 /* TwistyCube.swift in Sources */,
 				3AE124CA2226BCA200524345 /* Prisma.swift in Sources */,
 				3A4E692F21C13B220013EFA0 /* Recomendation.swift in Sources */,
 				3A24034A224009080075FE08 /* Twisty_skewb.swift in Sources */,
 				3A25733421C6C2C4002E6EE9 /* Blind.swift in Sources */,
 				3AAF1F2421C28F3900FC7632 /* Patterns.swift in Sources */,
-				3AC301832254866800C6CCDE /* Pyraminx.swift in Sources */,
+				3AC301832254866800C6CCDE /* Keyhole.swift in Sources */,
 				3A04B4C221B8FEE9006642B6 /* Reach.swift in Sources */,
 				3A255C0121B1BDDC002FA07B /* ListPager.swift in Sources */,
 				3A4B193D21BFB33800CB6F4D /* Rozov3x3.swift in Sources */,

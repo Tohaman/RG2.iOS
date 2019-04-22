@@ -1,9 +1,9 @@
 PODS:
-  - Toast-Swift (4.0.1)
-  - YoutubePlayer-in-WKWebView (0.2.4)
+  - Toast-Swift (5.0.0)
+  - YoutubePlayer-in-WKWebView (0.2.5)
 
 DEPENDENCIES:
-  - Toast-Swift (~> 4.0.0)
+  - Toast-Swift (~> 5.0.0)
   - YoutubePlayer-in-WKWebView (~> 0.2.0)
 
 SPEC REPOS:
@@ -12,9 +12,9 @@ SPEC REPOS:
     - YoutubePlayer-in-WKWebView
 
 SPEC CHECKSUMS:
-  Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
-  YoutubePlayer-in-WKWebView: 2d46d3a6d053900dede78a47378f12a8eacd8a91
+  Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
+  YoutubePlayer-in-WKWebView: 4dad12b3ece938a6456fa4374df78942f88b485a
 
-PODFILE CHECKSUM: b1b437697f0303264ea50242b1ee47f3e92b2061
+PODFILE CHECKSUM: 50f3f9bdec5b7cd08178c2bd32bc87f70f4f685e
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

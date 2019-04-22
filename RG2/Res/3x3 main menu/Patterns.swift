@@ -231,6 +231,12 @@ struct Patterns: Phases {
     <p style="text-align:center"><img src="pattern_4_2.xml" width="20%%"></p>
 
     <p><b>Алгоритм: D L\' U R\' B\' R B U2 D B D\' B\' L U D\'</b></p>
+
+    <p>Еще одна змея от Ненастина Савелия, которую я бы назвал \"УглоЗмейка\"</p>
+    
+    <p style="text-align:center"><img src="pattern_4_3.xml" width="30%%"></p>
+
+    <p><b>Алгоритм: L2 D B2 U R2 B2 D L\' B2 F\' D\' U R\' D2 R\' B2 F\' U\' F\'</b></p>
     """
     static let st4_url = "l6V7517N_lQ"
     static let st4_comment = "U B2 L D B\' F L\' D  U\' L\' R F\' D2 R\'"
@@ -359,6 +365,12 @@ struct Patterns: Phases {
     <p style="text-align:center"><img src="pattern_9_3.xml" width="20%%"></p>
 
     <p>Алгоритм: <b>M D\' F L2 F\' L</b></p>
+
+    <p>А можно собрать не три полоски, а только три стороны. Спасибо Stickman animation.</p>
+
+    <p style="text-align:center"><img src="pattern_9_4.xml" width="30%%"></p>
+
+    <p>Алгоритм: <b>U\' D L2 U B2 D2 B2 D2 L F\' U D\' R U\' F2 L F\' B\'</b></p>
     """
     static let st9_url = "l6V7517N_lQ"
     static let st9_comment = "R2 F2 M2 B2 L2"

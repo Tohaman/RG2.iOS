@@ -42,15 +42,16 @@ class ListPagerLab {
         phaseInit(phasesStrings: Fisher())
         phaseInit(phasesStrings: Gear())
         phaseInit(phasesStrings: IntF2L())
+        phaseInit(phasesStrings: Keyhole())
         phaseInit(phasesStrings: Oll())
         phaseInit(phasesStrings: Patterns())
         phaseInit(phasesStrings: Pll())
         phaseInit(phasesStrings: Pentacle())
         phaseInit(phasesStrings: Prisma())
-        phaseInit(phasesStrings: Pyraminx())
         phaseInit(phasesStrings: Pyramorphix())
         phaseInit(phasesStrings: Recomend())
         phaseInit(phasesStrings: Rozov3x3())
+        phaseInit(phasesStrings: TwistyCube())
         phaseInit(phasesStrings: TwistySkewb())
         
         //BasicMoves init
