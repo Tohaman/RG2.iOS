@@ -43,6 +43,7 @@ struct Main3x3 : Phases  {
         "Продвинутые методы (Фридрих (CFOP), ROUX)",
         "Сборка вслепую (Blind)",
         "Узоры на кубике",
+        "Кирпич (Brick Cube)",
         "Метод Кейхол для Пирамидки (Pyraminx)",
         "Закрученный куб",
         "Мастер пираморфикс (Master Pyramorphix)",
@@ -62,6 +63,7 @@ struct Main3x3 : Phases  {
         "main_4",
         "main_5",
         "main_6",
+        "brick_cube_10",
         "keyhole_5",
         "tw_cube_8",
         "pyramorphix_7",
@@ -81,6 +83,7 @@ struct Main3x3 : Phases  {
         "G2F",
         "BLIND",
         "PATTERNS",
+        "BRICK_CUBE",
         "KEYHOLE",
         "TW_CUBE",
         "PYRAMORPHIX",
@@ -95,6 +98,7 @@ struct Main3x3 : Phases  {
     
     let url = [
         Recomend.st1_url,
+        "submenu",
         "submenu",
         "submenu",
         "submenu",

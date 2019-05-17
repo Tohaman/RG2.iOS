@@ -46,6 +46,7 @@
 		3A9A1365224BAC630034B904 /* Pyramorphix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A1364224BAC630034B904 /* Pyramorphix.swift */; };
 		3A9A45632209832800BA1423 /* Fisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A45622209832800BA1423 /* Fisher.swift */; };
 		3AA00943226DE2FE00A76BA3 /* TwistyCube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA00942226DE2FE00A76BA3 /* TwistyCube.swift */; };
+		3AA299AD228D890E00177A2B /* BrickCube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA299AC228D890E00177A2B /* BrickCube.swift */; };
 		3AAF1F2421C28F3900FC7632 /* Patterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF1F2321C28F3900FC7632 /* Patterns.swift */; };
 		3AB878DE2212DC9500BDF3D1 /* Gear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB878DD2212DC9500BDF3D1 /* Gear.swift */; };
 		3AC301832254866800C6CCDE /* Keyhole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC301822254866800C6CCDE /* Keyhole.swift */; };
@@ -106,6 +107,7 @@
 		3A9A1364224BAC630034B904 /* Pyramorphix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pyramorphix.swift; sourceTree = "<group>"; };
 		3A9A45622209832800BA1423 /* Fisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fisher.swift; sourceTree = "<group>"; };
 		3AA00942226DE2FE00A76BA3 /* TwistyCube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwistyCube.swift; sourceTree = "<group>"; };
+		3AA299AC228D890E00177A2B /* BrickCube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrickCube.swift; sourceTree = "<group>"; };
 		3AAF1F2321C28F3900FC7632 /* Patterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patterns.swift; sourceTree = "<group>"; };
 		3AB878DD2212DC9500BDF3D1 /* Gear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gear.swift; sourceTree = "<group>"; };
 		3AC301822254866800C6CCDE /* Keyhole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyhole.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				3A255BFB21B1BD76002FA07B /* Begin3x3.swift */,
 				3A6A02D821CA5965002D368E /* G2Fridrich */,
 				3A25733321C6C2C4002E6EE9 /* Blind.swift */,
+				3AA299AC228D890E00177A2B /* BrickCube.swift */,
 				3AD59E2921F38404007C4888 /* Pentacle.swift */,
 				3A1EDE3321FB2292007406C5 /* Container.swift */,
 				3A9A45622209832800BA1423 /* Fisher.swift */,
@@ -475,6 +478,7 @@
 				3AAF1F2421C28F3900FC7632 /* Patterns.swift in Sources */,
 				3AC301832254866800C6CCDE /* Keyhole.swift in Sources */,
 				3A04B4C221B8FEE9006642B6 /* Reach.swift in Sources */,
+				3AA299AD228D890E00177A2B /* BrickCube.swift in Sources */,
 				3A255C0121B1BDDC002FA07B /* ListPager.swift in Sources */,
 				3A4B193D21BFB33800CB6F4D /* Rozov3x3.swift in Sources */,
 			);
