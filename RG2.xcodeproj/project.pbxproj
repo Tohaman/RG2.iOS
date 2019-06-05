@@ -43,6 +43,7 @@
 		3A6A02E221CA654C002D368E /* BasicMovesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A02E121CA654C002D368E /* BasicMovesViewController.swift */; };
 		3A73E22B21CCD7F3004648F2 /* BasicMoves.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A73E22A21CCD7F3004648F2 /* BasicMoves.storyboard */; };
 		3A73E22F21CCE1FB004648F2 /* ListPager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A73E22E21CCE1FB004648F2 /* ListPager.storyboard */; };
+		3A8A873C22A4F9DD009B7436 /* Penrose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8A873B22A4F9DD009B7436 /* Penrose.swift */; };
 		3A9A1365224BAC630034B904 /* Pyramorphix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A1364224BAC630034B904 /* Pyramorphix.swift */; };
 		3A9A45632209832800BA1423 /* Fisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A45622209832800BA1423 /* Fisher.swift */; };
 		3AA00943226DE2FE00A76BA3 /* TwistyCube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA00942226DE2FE00A76BA3 /* TwistyCube.swift */; };
@@ -104,6 +105,7 @@
 		3A6A02E121CA654C002D368E /* BasicMovesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMovesViewController.swift; sourceTree = "<group>"; };
 		3A73E22A21CCD7F3004648F2 /* BasicMoves.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BasicMoves.storyboard; sourceTree = "<group>"; };
 		3A73E22E21CCE1FB004648F2 /* ListPager.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListPager.storyboard; sourceTree = "<group>"; };
+		3A8A873B22A4F9DD009B7436 /* Penrose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Penrose.swift; sourceTree = "<group>"; };
 		3A9A1364224BAC630034B904 /* Pyramorphix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pyramorphix.swift; sourceTree = "<group>"; };
 		3A9A45622209832800BA1423 /* Fisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fisher.swift; sourceTree = "<group>"; };
 		3AA00942226DE2FE00A76BA3 /* TwistyCube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwistyCube.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				3A45FE0A22343E9800DED75E /* Cylinder.swift */,
 				3A9A1364224BAC630034B904 /* Pyramorphix.swift */,
 				3AC301822254866800C6CCDE /* Keyhole.swift */,
+				3A8A873B22A4F9DD009B7436 /* Penrose.swift */,
 				3A240349224009080075FE08 /* Twisty_skewb.swift */,
 				3AB878DD2212DC9500BDF3D1 /* Gear.swift */,
 				3AA00942226DE2FE00A76BA3 /* TwistyCube.swift */,
@@ -446,6 +449,7 @@
 				3A45FE0B22343E9800DED75E /* Cylinder.swift in Sources */,
 				3A66393721D2145100D452D0 /* Cross.swift in Sources */,
 				3A4B193821BF9A3500CB6F4D /* ListPagerViewController.swift in Sources */,
+				3A8A873C22A4F9DD009B7436 /* Penrose.swift in Sources */,
 				3A25733221C6A6E6002E6EE9 /* LabelExt.swift in Sources */,
 				3AB878DE2212DC9500BDF3D1 /* Gear.swift in Sources */,
 				3A255BFC21B1BD76002FA07B /* Begin3x3.swift in Sources */,

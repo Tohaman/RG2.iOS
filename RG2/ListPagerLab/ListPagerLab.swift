@@ -47,6 +47,7 @@ class ListPagerLab {
         phaseInit(phasesStrings: Oll())
         phaseInit(phasesStrings: Patterns())
         phaseInit(phasesStrings: Pll())
+        phaseInit(phasesStrings: Penrose())
         phaseInit(phasesStrings: Pentacle())
         phaseInit(phasesStrings: Prisma())
         phaseInit(phasesStrings: Pyramorphix())

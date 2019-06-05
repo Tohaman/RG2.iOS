@@ -43,6 +43,7 @@ struct Main3x3 : Phases  {
         "Продвинутые методы (Фридрих (CFOP), ROUX)",
         "Сборка вслепую (Blind)",
         "Узоры на кубике",
+        "Пенроуз (Penrose Cube)",
         "Кирпич (Brick Cube)",
         "Метод Кейхол для Пирамидки (Pyraminx)",
         "Закрученный куб",
@@ -63,6 +64,7 @@ struct Main3x3 : Phases  {
         "main_4",
         "main_5",
         "main_6",
+        "penrose_1",
         "brick_cube_10",
         "keyhole_5",
         "tw_cube_8",
@@ -83,6 +85,7 @@ struct Main3x3 : Phases  {
         "G2F",
         "BLIND",
         "PATTERNS",
+        "PENROSE",
         "BRICK_CUBE",
         "KEYHOLE",
         "TW_CUBE",
@@ -98,6 +101,7 @@ struct Main3x3 : Phases  {
     
     let url = [
         Recomend.st1_url,
+        "submenu",
         "submenu",
         "submenu",
         "submenu",
